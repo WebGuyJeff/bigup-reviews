@@ -20,5 +20,8 @@ literally any content type with a single plugin and no-code.
 
 #### Version history
 
+**0.1.1**
+Added a pattern for the editor.
+
 **0.1.0**
 Initial alpha release including 2 custom fields 'reviewer name' and 'review source URL'.

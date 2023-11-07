@@ -148,7 +148,8 @@ class Editor_Gutenberg {
 	 * @param array $editor_context The editor context
 	 */
 	public function allowed_block_types( $allowed_blocks, $editor_context ) {
-		if ( $this->key === $editor_context->post->post_type ) {
+		$post_type = ( !! $editor_context->post ) ? $editor_context->post->post_type : false;
+		if ( $post_type && $this->key === $post_type ) {
 			$allowed_blocks = array(
 				'core/paragraph',
 				'core/list',

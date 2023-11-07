@@ -45,6 +45,9 @@ class Initialise {
 		add_action( 'init', array( &$gutenberg, 'setup_custom_fields' ), 11, 0 );
 		add_filter( 'allowed_block_types_all', array( &$gutenberg, 'allowed_block_types' ), 25, 2 );
 
+		$patterns = new Patterns();
+		add_action( 'init', array( &$patterns, 'register_all' ) );
+
 		// Enable WP custom fields even if ACF is installed.
 		add_filter( 'acf/settings/remove_wp_meta_box', '__return_false' );
 
