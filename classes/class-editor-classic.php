@@ -89,7 +89,7 @@ class Editor_Classic {
 				<tbody>
 					<?php
 					foreach ( $this->fields as $field ) {
-						$field['id'] = $this->prefix . $field['suffix'];
+						$field['id'] = $this->prefix . $this->key . $field['suffix'];
 						echo '<tr>';
 						echo '<th scope="row">';
 						echo '<label for="' . $field['id'] . '"><b>' . $field['label'] . '</b></label>';
@@ -123,7 +123,7 @@ class Editor_Classic {
 			return;
 		}
 		foreach ( $this->fields as $field ) {
-			$field['id'] = $this->prefix . $field['suffix'];
+			$field['id'] = $this->prefix . $this->key . $field['suffix'];
 			if ( isset( $_POST[ $field['id'] ] ) && trim( $_POST[ $field['id'] ] ) ) {
 				$value = $_POST[ $field['id'] ];
 				update_post_meta( $post_id, $field['id'], $value );
