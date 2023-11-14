@@ -58,7 +58,7 @@ class Editor_Gutenberg {
 		foreach ( $this->custom_fields as $metafield ) {
 
 			$block_dir = CPTREV_DIR . 'build/blocks/' . str_replace( '_', '-', $this->key . $metafield['suffix'] );
-			$result    = register_block_type(
+			$result    = register_block_type_from_metadata(
 				$block_dir,
 				array(
 					'render_callback' => array( $this, 'dynamic_render_callback' ),
