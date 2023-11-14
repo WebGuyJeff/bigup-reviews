@@ -38,7 +38,10 @@
 			"post_tag"
 		],
 		"show_in_rest": true,
-		"delete_with_user": false
+		"delete_with_user": false,
+		"rewrite": {
+			"slug": "reviews"
+		}
 	},
 	"customFields": [
 		{
