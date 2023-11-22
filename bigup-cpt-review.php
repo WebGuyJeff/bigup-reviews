@@ -1,4 +1,6 @@
 <?php
+namespace BigupWeb\CPT_Review;
+
 /**
  * Plugin Name:       Bigup Web: Custom Post Type - Review
  * Description:       A custom 'Reviews' post type with custom meta fields.
@@ -25,5 +27,5 @@ define( 'CPTREV_URL', trailingslashit( get_site_url( null, strstr( __DIR__, '/wp
 require_once CPTREV_DIR . 'classes/autoload.php';
 
 // Setup this plugin.
-use BigupWeb\CPT_Review\Initialise;
-new Initialise();
+$Init = new Init();
+$Init->setup();
