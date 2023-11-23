@@ -59,9 +59,7 @@ class Patterns {
 		);
 
 		$path = CPTREV_DIR . 'patterns';
-		if( file_exists( $path ) ) {
-			$files = scandir( $path );
-		}
+		$files = ( file_exists( $path ) ) ? scandir( $path ) : array();
 		if ( is_array( $files ) ) {
 			$filenames = preg_replace( '/\..*/', '', $files );
 			$this->patterns = array_filter( $filenames );
