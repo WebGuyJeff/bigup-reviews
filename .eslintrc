@@ -1,0 +1,83 @@
+{
+	"env": {
+        "es6": true
+    },
+	"plugins": [ "react" ],
+	"extends": [ "plugin:react/recommended" ],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"overrides": [
+		{
+		  "files": ["*.jsx", "*.js"]
+		}
+	],
+	"root": true,
+	"rules": {
+		// suppress errors for missing 'import React' in files
+		"react/react-in-jsx-scope": "off",
+		"object-curly-spacing": [
+			"error",
+			"always"
+		],
+		"array-bracket-spacing": [
+			"error",
+			"always"
+		],
+		"computed-property-spacing": [
+			"error",
+			"always"
+		],
+		"space-in-parens": [
+			"error",
+			"always"
+		],
+		"no-multi-spaces": [
+			"error",
+			{
+				"exceptions": {
+					"VariableDeclarator": true
+				}
+			}
+		],
+		"camelcase": "error",
+		"class-methods-use-this": "error",
+		"eqeqeq": [
+			"error",
+			"always"
+		],
+		"multiline-comment-style": [
+			"error",
+			"starred-block"
+		],
+		"no-console": [
+			"warn",
+			{
+				"allow": [
+					"warn",
+					"error"
+				]
+			}
+		],
+		"spaced-comment": [
+			"error",
+			"always"
+		],
+		"yoda": [
+			"error",
+			"never"
+		],
+		"semi": [
+			"error",
+			"never"
+		],
+		"eol-last": [
+			"error",
+			"always"
+		]
+	}
+}
