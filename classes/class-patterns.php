@@ -58,7 +58,7 @@ class Patterns {
 			),
 		);
 
-		$path = CPTPRO_DIR . 'patterns';
+		$path = CPTREV_DIR . 'patterns';
 		if( file_exists( $path ) ) {
 			$files = scandir( $path );
 		}
