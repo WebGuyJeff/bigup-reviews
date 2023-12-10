@@ -4,7 +4,7 @@ namespace BigupWeb\CPT_Review;
 /**
  * Register custom post type.
  *
- * @package cpt-review
+ * @package bigup-cpt-review
  */
 class Custom_Post_Type {
 

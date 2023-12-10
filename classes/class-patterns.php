@@ -3,7 +3,7 @@ namespace BigupWeb\CPT_Review;
 /**
  * Patterns Handler.
  * 
- * @package cpt-review
+ * @package bigup-cpt-review
  */
 use WP_Block_Pattern_Categories_Registry;
 

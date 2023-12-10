@@ -4,7 +4,7 @@ namespace BigupWeb\CPT_Review;
 /**
  * Register custom meta box for the classic editor.
  *
- * @package cpt-review
+ * @package bigup-cpt-review
  */
 class Editor_Classic {
 

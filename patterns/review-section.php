@@ -2,18 +2,59 @@
 /**
  * Pattern
  *
- * @author Jefferson Real <me@jeffersonreal.uk>
- * @package bigup-cpt-review
- * @since 0.1.1
- *
- * Review Section
+ * Review Query Loop
  *
  */
 
+$markup = <<<END
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
+	<!-- wp:query {"queryId":24,"query":{"perPage":10,"pages":0,"offset":0,"postType":"review","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"align":"wide","layout":{"type":"default"}} -->
+	<div class="wp-block-query alignwide">
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}},"elements":{"link":{"color":{"text":"var:preset|color|bur-bg"}}}},"backgroundColor":"bur-bg-alt","textColor":"bur-bg","className":"has-border-radius-medium","layout":{"inherit":false}} -->
+		<div class="wp-block-group has-border-radius-medium has-bur-bg-color has-bur-bg-alt-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+			<div class="wp-block-group">
+				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} -->
+				<p class="has-text-align-center" style="margin-bottom:var(--wp--preset--spacing--40)">⭐⭐⭐⭐⭐</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:post-title {"textAlign":"center","level":3,"isLink":true,"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}},"typography":{"fontStyle":"italic","fontWeight":"700"}},"fontFamily":"body"} /-->
+			</div>
+			<!-- /wp:group -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group">
+				<!-- wp:post-excerpt {"showMoreOnNewLine":false} /-->
+				<!-- wp:bigupweb/review-source-url {"linkText":"See full review \u003e"} /-->
+			</div>
+			<!-- /wp:group -->
+			<!-- wp:columns -->
+			<div class="wp-block-columns">
+				<!-- wp:column {"width":"50%"} -->
+				<div class="wp-block-column" style="flex-basis:50%">
+					<!-- wp:bigupweb/review-name /-->
+				</div>
+				<!-- /wp:column -->
+				<!-- wp:column {"width":"30%"} -->
+				<div class="wp-block-column" style="flex-basis:30%">
+					<!-- wp:post-featured-image {"aspectRatio":"1","width":"4rem","height":"","align":"center","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"1rem","width":"0px","style":"none"}}} /-->
+				</div>
+				<!-- /wp:column -->
+			</div>
+			<!-- /wp:columns -->
+		</div>
+		<!-- /wp:group -->
+		<!-- /wp:post-template -->
+	</div>
+	<!-- /wp:query -->
+</div>
+<!-- /wp:group -->
+END;
+
 return array(
-	'title'       => __( 'Review Section', 'bigup-cpt-review' ),
-	'description' => _x( 'Display reviews in a section of wrapping-rows', 'Block pattern description', 'bigup-cpt-review' ),
+	'title'       => __( 'Review Query Loop', 'bigup-cpt-review' ),
+	'description' => _x( 'Display latest reviews as wrapping-cards', 'Block pattern description', 'bigup-cpt-review' ),
 	'categories'  => array( 'bigupweb-reviews' ),
 	'keywords'    => array( 'reviews', 'section' ),
-	'content'     => "<!-- wp:group {\"style\":{\"spacing\":{\"padding\":{\"top\":\"30px\",\"right\":\"30px\",\"bottom\":\"30px\",\"left\":\"30px\"}}},\"layout\":{\"inherit\":false}} -->\n<div class=\"wp-block-group\" style=\"padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px\"><!-- wp:query {\"queryId\":24,\"query\":{\"perPage\":6,\"pages\":0,\"offset\":0,\"postType\":\"review\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"exclude\",\"inherit\":false}} -->\n<div class=\"wp-block-query\"><!-- wp:post-template {\"layout\":{\"type\":\"grid\",\"columnCount\":3}} -->\n<!-- wp:group {\"style\":{\"spacing\":{\"padding\":{\"top\":\"30px\",\"right\":\"30px\",\"bottom\":\"30px\",\"left\":\"30px\"}}},\"layout\":{\"inherit\":false}} -->\n<div class=\"wp-block-group\" style=\"padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px\"><!-- wp:post-title {\"level\":3,\"isLink\":true} /-->\n\n<!-- wp:post-excerpt /-->\n\n<!-- wp:bigupweb/review-source-url /-->\n\n<!-- wp:columns {\"verticalAlignment\":null} -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"33.33%\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:33.33%\"><!-- wp:post-featured-image {\"width\":\"100px\",\"height\":\"100px\",\"scale\":\"contain\",\"align\":\"left\"} /--></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"66.66%\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:66.66%\"><!-- wp:bigupweb/review-name /--></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div>\n<!-- /wp:group -->\n<!-- /wp:post-template --></div>\n<!-- /wp:query --></div>\n<!-- /wp:group -->",
+	'content'     => $markup,
 );

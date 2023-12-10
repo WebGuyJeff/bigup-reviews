@@ -4,7 +4,7 @@ namespace BigupWeb\CPT_Review;
 /**
  * Sanitization methods.
  *
- * @package cpt-review
+ * @package bigup-cpt-review
  */
 class Sanitize {
 
