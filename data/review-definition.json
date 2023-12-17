@@ -37,6 +37,7 @@
 			"category",
 			"post_tag"
 		],
+		"has_archive": true,
 		"show_in_rest": true,
 		"delete_with_user": false,
 		"rewrite": {
