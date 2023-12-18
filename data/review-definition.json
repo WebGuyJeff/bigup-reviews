@@ -37,7 +37,7 @@
 			"category",
 			"post_tag"
 		],
-		"has_archive": true,
+		"has_archive": "reviews",
 		"show_in_rest": true,
 		"delete_with_user": false,
 		"rewrite": {

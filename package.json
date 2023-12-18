@@ -1,6 +1,6 @@
 {
 	"name": "bigup-cpt-review",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "A custom 'Reviews' post type with custom meta fields.",
 	"scripts": {
 		"build": "webpack --mode production",
