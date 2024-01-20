@@ -1,5 +1,5 @@
 {
-	"name": "bigup-cpt-review",
+	"name": "bigup-reviews",
 	"version": "0.1.2",
 	"description": "A custom 'Reviews' post type with custom meta fields.",
 	"scripts": {
