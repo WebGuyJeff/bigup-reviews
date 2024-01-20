@@ -7,9 +7,6 @@ import { PanelRow, TextControl } from '@wordpress/components'
 import json from '../../data/review-definition'
 const { label, prefix, key, customFields } = json
 
-
-console.log( 'bigup-cpt-review-metabox PLUGIN LOADED' )
-
 /**
  * Add a metabox for all post custom fields.
  * 
