@@ -1,4 +1,4 @@
-# Bigup Web: Custom Post Type - Review
+# Bigup Reviews
 
 ## Publish and manage reviews!
 

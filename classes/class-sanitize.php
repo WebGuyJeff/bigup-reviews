@@ -1,5 +1,5 @@
 <?php
-namespace BigupWeb\CPT_Review;
+namespace BigupWeb\Reviews;
 
 /**
  * Sanitization methods.

@@ -25,14 +25,14 @@ $markup = <<<END
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group">
 				<!-- wp:post-excerpt {"showMoreOnNewLine":false} /-->
-				<!-- wp:bigupweb/review-source-url {"linkText":"See full review \u003e"} /-->
+				<!-- wp:bigup-reviews/review-source-url {"linkText":"See full review \u003e"} /-->
 			</div>
 			<!-- /wp:group -->
 			<!-- wp:columns -->
 			<div class="wp-block-columns">
 				<!-- wp:column {"width":"50%"} -->
 				<div class="wp-block-column" style="flex-basis:50%">
-					<!-- wp:bigupweb/review-name /-->
+					<!-- wp:bigup-reviews/review-name /-->
 				</div>
 				<!-- /wp:column -->
 				<!-- wp:column {"width":"30%"} -->

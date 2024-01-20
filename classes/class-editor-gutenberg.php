@@ -1,5 +1,5 @@
 <?php
-namespace BigupWeb\CPT_Review;
+namespace BigupWeb\Reviews;
 
 /**
  * Register custom meta box for the Gutenberg editor.

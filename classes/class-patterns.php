@@ -1,5 +1,5 @@
 <?php
-namespace BigupWeb\CPT_Review;
+namespace BigupWeb\Reviews;
 /**
  * Patterns Handler.
  * 
@@ -94,7 +94,7 @@ class Patterns {
 				continue;
 			}
 			register_block_pattern(
-				'bigupweb/' . $pattern,
+				'bigup-reviews/' . $pattern,
 				require $file
 			);
 		}

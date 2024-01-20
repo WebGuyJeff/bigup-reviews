@@ -1,8 +1,8 @@
 <?php
-namespace BigupWeb\CPT_Review;
+namespace BigupWeb\Reviews;
 
 /**
- * Plugin Name:       Bigup Web: Custom Post Type - Review
+ * Plugin Name:       Bigup Reviews
  * Description:       A custom 'Reviews' post type with custom meta fields.
  * Requires at least: 6.0
  * Requires PHP:      7.4
@@ -18,8 +18,10 @@ namespace BigupWeb\CPT_Review;
  * @link              https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/creating-dynamic-blocks/
  */
 
+$enable_debug = false;
+
 // Define constants.
-define( 'CPTREV_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
+define( 'CPTREV_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true && $enable_debug );
 define( 'CPTREV_DIR', trailingslashit( __DIR__ ) );
 define( 'CPTREV_URL', trailingslashit( get_site_url( null, strstr( __DIR__, '/wp-content/' ) ) ) );
 

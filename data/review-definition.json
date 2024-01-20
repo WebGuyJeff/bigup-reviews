@@ -46,7 +46,7 @@
 	},
 	"customFields": [
 		{
-			"block_name": "bigupweb/review-name",
+			"block_name": "bigup-reviews/review-name",
 			"suffix": "_name",
 			"label": "Reviewer Name",
 			"description": "Name of the reviewer",
@@ -60,7 +60,7 @@
 			"user_capabilities": "edit_posts"
 		},
 		{
-			"block_name": "bigupweb/review-source-url",
+			"block_name": "bigup-reviews/review-source-url",
 			"suffix": "_source_url",
 			"label": "Review Source URL",
 			"description": "Link to the review source",

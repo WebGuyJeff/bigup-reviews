@@ -1,5 +1,5 @@
 <?php
-namespace BigupWeb\CPT_Review;
+namespace BigupWeb\Reviews;
 
 /**
  * Initialise.
@@ -76,7 +76,7 @@ class Init {
 	 * Enqueue scripts for this plugin.
 	 */
 	public function enqueue_editor_scripts() {
-		wp_register_script( 'bigup_cpt_review_js', CPTREV_URL . 'build/metaboxPlugin.js', array(), filemtime( CPTREV_DIR . 'build/metaboxPlugin.js' ), true );
-		wp_enqueue_script( 'bigup_cpt_review_js' );
+		wp_register_script( 'bigup_Reviews_js', CPTREV_URL . 'build/metaboxPlugin.js', array(), filemtime( CPTREV_DIR . 'build/metaboxPlugin.js' ), true );
+		wp_enqueue_script( 'bigup_Reviews_js' );
 	}
 }
