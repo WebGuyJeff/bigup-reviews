@@ -1,15 +1,25 @@
 {
 	"$schema": "https://json.schemastore.org/block.json",
 	"apiVersion": 2,
-	"name": "bigup-reviews/review-name",
+	"name": "bigup-reviews/review-avatar",
 	"version": "0.1.0",
-	"title": "Reviewer Name",
+	"title": "Review Avatar",
 	"category": "theme",
 	"icon": "smiley",
-	"description": "Name custom field for the 'Review' custom post type",
+	"description": "Avatar (image) of the reviewer",
 	"usesContext": [ "postId", "postType", "queryId" ],
 	"textdomain": "bigup-reviews",
 	"editorScript": "file:./index.js",
+	"attributes": {
+		"width": {
+			"type": "integer",
+			"default": 60
+		},
+		"height": {
+			"type": "integer",
+			"default": 60
+		}
+	},
 	"supports": { "html": false },
 	"ancestor": [ "bigup-reviews/review" ]
 }

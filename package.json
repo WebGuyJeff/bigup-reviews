@@ -26,6 +26,7 @@
 	"dependencies": {
 		"@wordpress/compose": "^6.22.0",
 		"@wordpress/plugins": "^6.13.0",
-		"@wordpress/server-side-render": "^4.21.0"
+		"@wordpress/server-side-render": "^4.21.0",
+		"external-svg-loader": "^1.6.10"
 	}
 }

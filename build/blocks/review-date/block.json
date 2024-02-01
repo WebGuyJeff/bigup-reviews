@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/block.json",
   "apiVersion": 2,
-  "name": "bigup-reviews/review-name",
+  "name": "bigup-reviews/review-date",
   "version": "0.1.0",
-  "title": "Reviewer Name",
+  "title": "Reviewer Date",
   "category": "theme",
   "icon": "smiley",
-  "description": "Name custom field for the 'Review' custom post type",
+  "description": "Date the original review was published",
   "usesContext": [
     "postId",
     "postType",

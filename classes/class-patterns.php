@@ -53,7 +53,7 @@ class Patterns {
 	private function setup_properties() {
 
 		$this->categories = array(
-			'bigupweb-reviews' => array(
+			'bigup-reviews' => array(
 				'label' => __( 'Bigup Web: Reviews', 'cpt-review' )
 			),
 		);

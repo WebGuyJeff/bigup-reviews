@@ -12,15 +12,12 @@
     "postType",
     "queryId"
   ],
+  "textdomain": "bigup-reviews",
+  "editorScript": "file:./index.js",
   "supports": {
     "html": false
   },
-  "textdomain": "bigupweb-review-source-url",
-  "editorScript": "file:./index.js",
-  "attributes": {
-    "linkText": {
-      "type": "string",
-      "default": "See review source"
-    }
-  }
+  "ancestor": [
+    "bigup-reviews/review"
+  ]
 }

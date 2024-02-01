@@ -1,31 +1,97 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/components/MetaBox.js":
+/***/ "./assets/svg/bigup-logo.svg":
 /*!***********************************!*\
-  !*** ./src/components/MetaBox.js ***!
+  !*** ./assets/svg/bigup-logo.svg ***!
   \***********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: function() { return /* binding */ SvgBigupLogo; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _path, _path2;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgBigupLogo = function SvgBigupLogo(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlSpace: "preserve",
+    width: 24,
+    height: 24
+  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M.614 0v24h13.003c3.191 0 5.611-.583 7.262-1.748 1.672-1.166 2.508-2.789 2.508-4.869 0-1.394-.363-2.583-1.09-3.566-.703-1.005-1.716-1.771-3.036-2.297-.056-.023-.12-.038-.177-.06.943-.51 1.693-1.148 2.224-1.929.66-.96.99-2.045.99-3.257 0-1.828-.76-3.326-2.277-4.491C18.502.594 16.148 0 12.958 0Z"
+  })), _path2 || (_path2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    fill: "#f8f801",
+    d: "M9.432.928c-.87-.017-1.376.102-1.696.377-.112.097-.437.647-.747 1.271-.625 1.255-.62 1.248-1.346 2.356-.654.999-.756 1.273-.713 1.96.054.885.484 1.57 1.26 1.995l.214.117-.41-.027c.009.334.05.65.147.969.11.362.33.59.781.816.523.259 1 .362 1.646.355.95-.008 1.506-.258 1.811-.812.32-.582.2-1.142-.463-2.219-.281-.458-.294-.502-.254-.89.082-.803.089-.768-.095-.766-.137.002-.226.104-.448.506-.322.584-.516.808-1.023 1.197-.448.34-.572.37-.203.049.644-.562 1.135-1.515 1.576-3.055l.232-.81-.353-.358c-.294-.297-.326-.35-.178-.307.21.06.54.057.643-.007.107-.069.083-.444-.043-.682-.135-.256-.097-.264.203-.043.516.381 1.044.347 1.4-.094l.215-.27.004.27c.005.588.36 1.046 1.393 1.8.553.402.694.474.925.466.588-.02.622-.37.135-1.383-.16-.334-.38-.878-.492-1.21-.287-.856-.522-1.256-.785-1.347-.12-.039-.444-.069-.723-.066A23.053 23.053 0 0 1 10.43.988a13.737 13.737 0 0 0-.998-.06Zm4.957 1.115c-.377.002-.663.133-.66.309 0 .134.36 1.075.525 1.375.111.204.541.113.791-.17.46-.52.027-1.515-.656-1.514Zm.4 1.945c-.177 0-.33.026-.33.077.001.04.037.211.08.377.103.388.01.645-.29.804-.334.177-.748.109-1.274-.209-.333-.2-.541-.274-.836-.295-.614-.045-1.125.252-1.166.68-.01.103-.014.193-.012.273.008.242.08.4.23.547.234.227.27.234.934.125.256-.04.931-.108 1.5-.15 1.143-.084 1.774-.264 1.963-.559.354-.55.197-1.322-.322-1.593-.097-.051-.3-.077-.477-.077Zm-.207 2.354c-.256.002-.602.046-1.068.121-.39.062-.915.116-1.17.12-.256.002-.545.046-.64.097-.267.137-.498.534-.495.851.004.34.187.536.557.594.15.023.304.055.344.07.038.014.57.015 1.177 0 1.02-.024 1.136-.043 1.463-.21.426-.218.528-.407.524-.952-.005-.5-.129-.695-.692-.691Zm-.19 2.064-1.437.077c-.999.055-1.472.108-1.55.174-.071.06-.106.207-.106.372 0 .167.036.351.107.487.13.243.524.493.97.615.44.12 1.4.067 1.698-.094.574-.306.825-1.057.483-1.445Zm-.837 2.713c-.452-.008-1.006.04-1.7.14-.647.091-1.5.188-1.894.216-1.257.086-1.393.212-1.773 1.664-.097.372-.31.997-.471 1.39-.338.82-.473 1.234-.426 1.471.028.143.122.223.278.29.319.134.65.052 1.01-.253 1.549-1.315 1.852-1.702 1.884-2.408l.018-.353.215.203c.594.56 1.212.522 1.923-.121l.19-.172-.17.345c-.195.394-.215.613-.073.758.123.126.608.136.83.02.246-.13.202-.045-.216.418l-.379.422.291.867c.524 1.56.967 2.383 1.686 3.125.35.363.626.66.61.66-.013 0-.164-.072-.335-.162-.434-.23-.98-.799-1.412-1.473-.288-.448-.412-.57-.574-.572-.242 0-.256.093-.084.588.19.553.153.733-.352 1.709-.419.811-.47.963-.473 1.428-.004.84.442 1.437 1.24 1.666.465.133 1.607.115 2.122-.033 1.045-.302 1.652-.76 1.807-1.393.107-.44.017-.755-.063-1.154-.244-.002-.24-.005.137-.24.45-.282.706-.61.978-1.258.229-.545.274-1.452.094-1.963-.06-.173-.465-.803-.9-1.397-.712-.975-1.34-1.975-2.16-3.451-.37-.664-.865-.958-1.858-.977Zm-6.342 1.63c-.505-.004-.999.57-1.04 1.134a.961.961 0 0 0 .013.24c.074.415.577.828.964.793.18-.017.242-.12.49-.816.156-.44.285-.878.286-.975.003-.211-.305-.374-.713-.377Zm-.48 2.355c-.381-.003-.468.028-.682.254a1.36 1.36 0 0 0-.381.918c0 .11.01.22.04.33.106.408.259.57.751.799.317.147.62.187 1.854.24.81.036 1.751.064 2.093.062.582-.003.635-.017.803-.238.122-.161.18-.363.182-.63.006-.74-.46-1.081-1.39-1.02-.423.026-.579.088-1.018.392-.575.399-1.078.51-1.497.332-.329-.14-.458-.48-.38-1.011l.062-.426Zm.566 2.732c-.617-.004-.82.138-.89.5-.019.09-.026.19-.026.291 0 .307.076.637.201.836.13.204.38.335.87.453.45.109 2.418.038 2.99-.107.79-.201.975-.553.642-1.217-.256-.514-.431-.596-1.285-.604a24.19 24.19 0 0 1-1.737-.1 8.59 8.59 0 0 0-.765-.052Zm.313 2.41-.22.215c-.14.14-.19.22-.19.39 0 .058.004.125.013.208.113 1.081 1.245 1.52 2.818 1.092.659-.18 1.116-.623 1.18-1.145.037-.31.014-.437-.101-.566-.14-.157-.264-.169-1.827-.182Z"
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgdmlld0JveD0iMCAwIDI0IDI0IiB2ZXJzaW9uPSIxLjEiIGlkPSJzdmcxIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnMgaWQ9ImRlZnMxIiAvPjxnIGlkPSJsb2dvIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjAyOTE0MywwLDAsMC4wMjkxNDMsLTIuODA1NjEsLTIuNzE3MTIpIj48cGF0aCBpZD0iQiIgZD0iTSAxMTcuMzI0LDkzLjIzNjIgViA5MTYuNzY1IEggNTYzLjUzNSBDIDY3My4wMTMsOTE2Ljc2NSA3NTYuMDY2LDg5Ni43NjIgODEyLjY5NSw4NTYuNzY0IDg3MC4wNzIsODE2Ljc2NyA4OTguNzY0LDc2MS4wODIgODk4Ljc2NCw2ODkuNzA4IDg5OC43NjQsNjQxLjg1OCA4ODYuMzAzLDYwMS4wNzYgODYxLjM5MSw1NjcuMzUyIDgzNy4yMjYsNTMyLjg0MyA4MDIuNDk0LDUwNi41NjcgNzU3LjE5Niw0ODguNTMxIDc1NS4yNTksNDg3Ljc0NiA3NTMuMDc2LDQ4Ny4yMjUgNzUxLjEwNiw0ODYuNDc1IDc4My40NjgsNDY4Ljk0MyA4MDkuMTg3LDQ0Ny4wNjkgODI3LjQxNSw0MjAuMjkgODUwLjA2OCwzODcuMzUyIDg2MS4zOTEsMzUwLjA5OSA4NjEuMzkxLDMwOC41MzEgODYxLjM5MSwyNDUuNzg3IDgzNS4zNCwxOTQuNDA3IDc4My4yNDcsMTU0LjQxIDczMS4xNTQsMTEzLjYyNyA2NTAuMzY4LDkzLjIzNjIgNTQwLjg5LDkzLjIzNjIgWiIgZmlsbD0iIzAwMDAwMCIgLz48cGF0aCBpZD0iZmlzdHMiIGQ9Ik0gNDE5LjkwOCwxMjUuMDcyIEMgMzkwLjA2NiwxMjQuNDkyIDM3Mi43MTcsMTI4LjU2MSAzNjEuNzM3LDEzOC4wMDcgMzU3Ljg5NCwxNDEuMzMgMzQ2LjcwOCwxNjAuMjIyIDMzNi4wNzMsMTgxLjYzIDMxNC42MjUsMjI0LjY3MyAzMTQuNzgyLDIyNC40MzggMjg5Ljg5NCwyNjIuNDU4IDI2Ny40NTMsMjk2Ljc0MyAyNjMuOTY0LDMwNi4xNCAyNjUuNDI5LDMyOS43NSAyNjcuMjc3LDM2MC4xMDMgMjgyLjA1LDM4My41NzYgMzA4LjY1OCwzOTguMTczIEwgMzE2LjAzLDQwMi4xOTMgMzAxLjk1NSw0MDEuMjU5IEMgMzAyLjI0LDQxMi43MiAzMDMuNjM2LDQyMy41OTEgMzA2Ljk3OCw0MzQuNTAyIDMxMC43OTEsNDQ2LjkyNiAzMTguMzIxLDQ1NC43NyAzMzMuNzkyLDQ2Mi41MTYgMzUxLjcyMSw0NzEuMzkyIDM2OC4xMjYsNDc0LjkzIDM5MC4yODIsNDc0LjcxNCA0MjIuODY2LDQ3NC40MjkgNDQxLjk1NSw0NjUuODM4IDQ1Mi40MTQsNDQ2LjgyOCA0NjMuMzY0LDQyNi44NjUgNDU5LjMwNCw0MDcuNjM4IDQzNi41MjksMzcwLjY5OSA0MjYuODY3LDM1NC45ODIgNDI2LjQzNCwzNTMuNDU4IDQyNy44MiwzNDAuMTQgNDMwLjYzMiwzMTIuNjA3IDQzMC44NDgsMzEzLjc5NyA0MjQuNTM3LDMxMy44NjYgNDE5Ljg1OSwzMTMuOTM0IDQxNi43ODIsMzE3LjQ1MyA0MDkuMTg0LDMzMS4yMjQgMzk4LjEzNiwzNTEuMjU3IDM5MS40ODEsMzU4Ljk3MyAzNzQuMDYzLDM3Mi4zMDEgMzU4LjcxLDM4My45NTkgMzU0LjQ1NCwzODUuMDExIDM2Ny4wOTQsMzczLjk4MiAzODkuMjAxLDM1NC43MTcgNDA2LjA2OCwzMjEuOTk1IDQyMS4xODYsMjY5LjE2MSBMIDQyOS4xNTcsMjQxLjM0NCA0MTcuMDI4LDIyOS4wODcgQyA0MDYuOTMzLDIxOC44OTQgNDA1Ljg1MiwyMTcuMDY1IDQxMC45MzMsMjE4LjU2IDQxOC4xMDksMjIwLjYzNCA0MjkuNDcyLDIyMC40OTYgNDMyLjk4MSwyMTguMjk0IDQzNi42NDcsMjE1Ljk0NSA0MzUuODIyLDIwMy4wNjggNDMxLjUwNiwxOTQuOSA0MjYuODc3LDE4Ni4xMzIgNDI4LjE3NCwxODUuODQ3IDQzOC40NzYsMTkzLjQyNiA0NTYuMTg4LDIwNi41MTggNDc0LjMwNCwyMDUuMzQ5IDQ4Ni41MzIsMTkwLjIxMSBMIDQ5My45MDQsMTgwLjk2MiA0OTQuMDMxLDE5MC4yMTEgQyA0OTQuMjA4LDIxMC4zOTEgNTA2LjM2NywyMjYuMDk5IDU0MS44MjIsMjUxLjk0IDU2MC44MTIsMjY1Ljc1MSA1NjUuNjU4LDI2OC4yMzcgNTczLjU4MSwyNjcuOTUyIDU5My43NTEsMjY3LjI1NCA1OTQuOTAxLDI1NS4yNTMgNTc4LjIxMSwyMjAuNTA2IDU3Mi43MjYsMjA5LjA1NCA1NjUuMTY3LDE5MC4zODggNTYxLjMyNCwxNzkuMDE2IDU1MS40NzUsMTQ5LjYxNiA1NDMuNDE0LDEzNS44NzQgNTM0LjM4MSwxMzIuNzc4IDUzMC4yOTIsMTMxLjQ0MSA1MTkuMTQ2LDEzMC40MDkgNTA5LjU4MiwxMzAuNDk4IDUwMC4wMDgsMTMwLjU1NyA0NzUuMDUxLDEyOS4wNDMgNDU0LjE1MywxMjcuMTQ2IDQ0MS4yMDgsMTI1Ljk0NyA0MjkuODU1LDEyNS4yNTkgNDE5LjkwOCwxMjUuMDcyIFogTSA1OTAuMDA2LDE2My4zMzggQyA1NzcuMDYxLDE2My4zOTcgNTY3LjI3LDE2Ny45MDkgNTY3LjM0OSwxNzMuOTI0IDU2Ny4zODgsMTc4LjUyNCA1NzkuNzE0LDIxMC44MjQgNTg1LjM3NiwyMjEuMTA1IDU4OS4xOSwyMjguMTMzIDYwMy45NDQsMjI0Ljk5OCA2MTIuNTI1LDIxNS4yNzYgNjI4LjI3MiwxOTcuNDE2IDYxMy40NTksMTYzLjI4OSA1OTAuMDA2LDE2My4zMzggWiBNIDYwMy43NDcsMjMwLjA4OSBDIDU5Ny42NjMsMjMwLjA5OSA1OTIuNDA0LDIzMC45NjQgNTkyLjQxNCwyMzIuNzA0IDU5Mi40NDQsMjM0LjExIDU5My42ODIsMjM5Ljk1OCA1OTUuMTY2LDI0NS42NCA1OTguNzA1LDI1OC45NjggNTk1LjQ5MSwyNjcuNzc1IDU4NS4xOCwyNzMuMjUgNTczLjczOCwyNzkuMzA1IDU1OS41MzUsMjc2Ljk3NiA1NDEuNDc4LDI2Ni4wNzUgNTMwLjA3NiwyNTkuMjI0IDUyMi45MSwyNTYuNjU4IDUxMi43OTYsMjU1Ljk2IDQ5MS43MjEsMjU0LjM4OCA0NzQuMTg2LDI2NC42MDEgNDcyLjc5LDI3OS4yODYgNDcyLjQyNiwyODIuODA1IDQ3Mi4yOTksMjg1LjkwMSA0NzIuMzg3LDI4OC42NjMgNDcyLjY2MiwyOTYuOTU5IDQ3NS4xMSwzMDIuMzY1IDQ4MC4yOSwzMDcuNDI3IDQ4OC4zMTEsMzE1LjIyMiA0ODkuNTU5LDMxNS40NDggNTEyLjMzNCwzMTEuNzIzIDUyMS4xMDIsMzEwLjMzNyA1NDQuMjcsMzA3Ljk4OCA1NjMuODAxLDMwNi41NjIgNjAzLDMwMy42NzIgNjI0LjY2NCwyOTcuNDkgNjMxLjE1MiwyODcuMzk1IDY0My4yODEsMjY4LjQ4MyA2MzcuOTA1LDI0Mi4wMDMgNjIwLjA5NCwyMzIuNzA0IDYxNi43NjIsMjMwLjk1NCA2MDkuODIyLDIzMC4wNyA2MDMuNzQ3LDIzMC4wODkgWiBNIDU5Ni42NDEsMzEwLjg0OCBDIDU4Ny44NjMsMzEwLjkxNyA1NzUuOTc5LDMxMi40MjEgNTU5Ljk3NywzMTUuMDA2IDU0Ni42MTksMzE3LjEzOSA1MjguNjAxLDMxOC45OTcgNTE5LjgzNCwzMTkuMDk1IDUxMS4wNTYsMzE5LjE4MyA1MDEuMTQ4LDMyMC42OTcgNDk3Ljg1NSwzMjIuNDQ3IDQ4OC43MjQsMzI3LjE1NSA0ODAuODAxLDM0MC43ODggNDgwLjg5OSwzNTEuNjYgNDgxLjAyNywzNjMuMzQ3IDQ4Ny4zMDgsMzcwLjAzMSA0OTkuOTk4LDM3Mi4wMzYgNTA1LjE1OCwzNzIuODMyIDUxMC40MzcsMzczLjkxMyA1MTEuNzkzLDM3NC40NTQgNTEzLjEyLDM3NC45MjYgNTMxLjMzNCwzNzQuOTU1IDU1Mi4yMDIsMzc0LjQ1NCA1ODcuMTY1LDM3My42MDkgNTkxLjE3NiwzNzIuOTcgNjAyLjQwMSwzNjcuMjEgNjE2Ljk5NywzNTkuNzU5IDYyMC41MjYsMzUzLjI1MiA2MjAuMzY5LDMzNC41NzYgNjIwLjIyMSwzMTcuNDI0IDYxNS45NTYsMzEwLjcgNTk2LjY0MSwzMTAuODQ4IFogTSA1OTAuMTQzLDM4MS42ODkgNTQwLjgxLDM4NC4zMDMgQyA1MDYuNTI1LDM4Ni4yMSA0OTAuMjc3LDM4OC4wMjkgNDg3LjYwMywzOTAuMjcgNDg1LjE2NSwzOTIuMzI0IDQ4My45NzYsMzk3LjM4NiA0ODMuOTc2LDQwMy4wNjggNDg0LjAwNSw0MDguNzY5IDQ4NS4yMjQsNDE1LjEwOSA0ODcuNjYyLDQxOS43NTggNDkyLjEwNSw0MjguMDkzIDUwNS42NCw0MzYuNjc0IDUyMC45MDUsNDQwLjg2MiA1MzYuMDMzLDQ0NC45NyA1NjguOTcxLDQ0My4xNTIgNTc5LjIxMyw0MzcuNjQ3IDU5OC45MTEsNDI3LjEzIDYwNy41MTIsNDAxLjM3NyA1OTUuNzY2LDM4OC4wNTggWiBNIDU2MS4zOTIsNDc0Ljc3MyBDIDU0NS44OTEsNDc0LjQ5OCA1MjYuODgxLDQ3Ni4xNTkgNTAzLjA4NCw0NzkuNTQgNDgwLjg0LDQ4Mi43MDYgNDUxLjU5OCw0ODYuMDM4IDQzOC4wNzMsNDg2Ljk3MSAzOTQuOTUxLDQ4OS45NCAzOTAuMjgyLDQ5NC4yNjUgMzc3LjIxOSw1NDQuMDggMzczLjg5Niw1NTYuODU5IDM2Ni42MjIsNTc4LjI5NyAzNjEuMDY5LDU5MS43OTIgMzQ5LjQ4LDYxOS45MTQgMzQ0LjgzMSw2MzQuMTA4IDM0Ni40NTIsNjQyLjI1NyAzNDcuNDI2LDY0Ny4xNTIgMzUwLjY1LDY0OS45MDQgMzU1Ljk3Nyw2NTIuMTc1IDM2Ni45MzcsNjU2LjgxNCAzNzguMzE5LDY1My45NzMgMzkwLjYyNiw2NDMuNTM0IDQ0My43OTMsNTk4LjM5OCA0NTQuMTgzLDU4NS4xMDggNDU1LjI5NCw1NjAuODk5IEwgNDU1LjkwMyw1NDguNzY5IDQ2My4yNzUsNTU1LjczOCBDIDQ4My42NjEsNTc0Ljk5NCA1MDQuODkzLDU3My42NTcgNTI5LjI5LDU1MS41OCBMIDUzNS43ODcsNTQ1LjY4MyA1MjkuOTU4LDU1Ny41NDcgQyA1MjMuMjg0LDU3MS4wNjIgNTIyLjU4Niw1NzguNTcyIDUyNy40NzEsNTgzLjU1NSA1MzEuNjc4LDU4Ny44NTEgNTQ4LjMxOSw1ODguMjI0IDU1NS45NTcsNTg0LjIyNCA1NjQuMzksNTc5Ljc5MSA1NjIuODc3LDU4Mi42NzEgNTQ4LjUxNiw1OTguNTY1IEwgNTM1LjUyMSw2MTMuMDQ0IDU0NS41MDgsNjQyLjc5NyBDIDU2My40NzYsNjk2LjM0OCA1NzguNjczLDcyNC41NTggNjAzLjM0NCw3NTAuMDI2IDYxNS4zOTUsNzYyLjQ5IDYyNC44NTEsNzcyLjY4MyA2MjQuMzIsNzcyLjY4MyA2MjMuODQ5LDc3Mi42NzMgNjE4LjY1OSw3NzAuMjA2IDYxMi43OSw3NjcuMTIgNTk3Ljg4OSw3NTkuMjQ2IDU3OS4xNjQsNzM5LjcwNiA1NjQuMzQxLDcxNi41ODcgNTU0LjQ1Myw3MDEuMjA0IDU1MC4yMTYsNjk3LjAxNiA1NDQuNjMzLDY5Ni45NDggNTM2LjM0Nyw2OTYuOTE4IDUzNS44NzUsNzAwLjE1MiA1NDEuNzUzLDcxNy4xMTggNTQ4LjI2LDczNi4xMDggNTQ3LjAwMiw3NDIuMjcxIDUyOS42ODMsNzc1Ljc2IDUxNS4zMTIsODAzLjYwNyA1MTMuNTcyLDgwOC43OTcgNTEzLjQ2NCw4MjQuNzUgNTEzLjMxNyw4NTMuNTg5IDUyOC42MTEsODc0LjA4NCA1NTYuMDI2LDg4MS45MTggNTcxLjk0OSw4ODYuNDc4IDYxMS4xNDksODg1Ljg2OSA2MjguODEyLDg4MC43ODcgNjY0LjY5LDg3MC40NDcgNjg1LjQ4OSw4NTQuNzI5IDY5MC44MDcsODMyLjk5NyA2OTQuNTAyLDgxNy45MTggNjkxLjQxNiw4MDcuMTA2IDY4OC42NTQsNzkzLjM5NCA2ODAuMjk5LDc5My4zNDUgNjgwLjQxNyw3OTMuMjM3IDY5My4zNTIsNzg1LjE0NyA3MDguODE0LDc3NS40OTQgNzE3LjU5Miw3NjQuMjUgNzI2LjkzLDc0MS45ODYgNzM0Ljc2NCw3MjMuMzEgNzM2LjMxNyw2OTIuMTggNzMwLjE0NCw2NzQuNjM1IDcyOC4wOTksNjY4LjY5OCA3MTQuMTkxLDY0Ny4wODMgNjk5LjI1LDYyNi43MDcgNjc0LjgyNCw1OTMuMjU3IDY1My4yOTcsNTU4LjkzMyA2MjUuMTI2LDUwOC4yOTEgNjEyLjQyNyw0ODUuNTE3IDU5NS40NzEsNDc1LjQwMiA1NjEuMzkyLDQ3NC43NzMgWiBNIDM0My43NzksNTMwLjY3MyBDIDMyNi40Myw1MzAuNTU1IDMwOS40OTQsNTUwLjI3MyAzMDguMTE4LDU2OS42MDcgMzA3LjkyMSw1NzIuMzY5IDMwOC4wMjksNTc1LjE2MSAzMDguNTIxLDU3Ny44NTQgMzExLjA4Niw1OTIuMDg3IDMyOC4zNDcsNjA2LjI3MSAzNDEuNjI2LDYwNS4wNjIgMzQ3Ljc5OSw2MDQuNDgyIDM0OS45MTIsNjAwLjkxNCAzNTguNDU0LDU3Ny4wNDggMzYzLjc3Miw1NjEuOTQgMzY4LjE5NSw1NDYuOTExIDM2OC4yMzQsNTQzLjYwOSAzNjguMzMzLDUzNi4zNDUgMzU3Ljc2Niw1MzAuNzUyIDM0My43NzksNTMwLjY3MyBaIE0gMzI3LjI4NSw2MTEuNSBDIDMxNC4yMjIsNjExLjM5MiAzMTEuMjM0LDYxMi40NzQgMzAzLjkwMSw2MjAuMjA5IDI5NS41MTYsNjI5LjA0NiAyOTAuOTQ2LDY0MC4zMyAyOTAuODI4LDY1MS43MTMgMjkwLjc5OCw2NTUuNTI2IDI5MS4yMDEsNjU5LjMwMSAyOTIuMTc0LDY2My4wMzYgMjk1LjgyMSw2NzcuMDUzIDMwMS4wOCw2ODIuNjI2IDMxNy45NzcsNjkwLjQ1IDMyOC44NDgsNjk1LjUyMiAzMzkuMjY3LDY5Ni44ODkgMzgxLjU3Myw2OTguNjg3IDQwOS4zNTEsNjk5LjkzNiA0NDEuNjcsNzAwLjg5OSA0NTMuNDE2LDcwMC44MyA0NzMuMzYsNzAwLjczMiA0NzUuMTg4LDcwMC4yMzEgNDgwLjk2OCw2OTIuNjYyIDQ4NS4xNDYsNjg3LjExOCA0ODcuMTUxLDY4MC4xOTggNDg3LjIsNjcxLjAwOCA0ODcuNDA2LDY0NS42NDggNDcxLjM5NCw2MzMuOTQxIDQzOS40NzgsNjM2LjAyNSA0MjQuOTk5LDYzNi45NDkgNDE5LjY0Miw2MzkuMDUyIDQwNC41NjQsNjQ5LjUwMSAzODQuODQ2LDY2My4xNzQgMzY3LjU4Niw2NjYuOTY4IDM1My4yMjUsNjYwLjg5MyAzNDEuOTIxLDY1Ni4wODcgMzM3LjQ4OCw2NDQuMzkgMzQwLjE1Miw2MjYuMTc2IEwgMzQyLjMwNCw2MTEuNTY5IFogTSAzNDYuNzI4LDcwNS4yNTMgQyAzMjUuNTY1LDcwNS4xMDYgMzE4LjYwNiw3MDkuOTgxIDMxNi4xNTgsNzIyLjQxNiAzMTUuNTQ5LDcyNS41MjIgMzE1LjI4Myw3MjguOTEzIDMxNS4yOTMsNzMyLjQwMiAzMTUuMjkzLDc0Mi45MSAzMTcuODk4LDc1NC4yNjMgMzIyLjE5Myw3NjEuMDg1IDMyNi42MzYsNzY4LjA4MyAzMzUuMjE3LDc3Mi41NzUgMzUyLjAxNiw3NzYuNjM1IDM2Ny40NTgsNzgwLjM2IDQzNS4wMDYsNzc3LjkxMiA0NTQuNjI1LDc3Mi45NDkgNDgxLjc2NCw3NjYuMDM5IDQ4OC4xMDQsNzUzLjk3OCA0NzYuNjczLDczMS4xOTMgNDY3Ljg5NSw3MTMuNTQ5IDQ2MS44NzksNzEwLjcyOCA0MzIuNTc4LDcxMC40ODMgNDE4LjUxMiw3MTAuMzY1IDM5MS43MDcsNzA4LjgyMSAzNzIuOTkyLDcwNy4wMDMgMzYyLjQyNSw3MDUuOTQxIDM1My43NzUsNzA1LjMwMyAzNDYuNzI4LDcwNS4yNTMgWiBNIDM1Ny40NTIsNzg3Ljk1OCAzNDkuOTQyLDc5NS4zMyBDIDM0NS4wODYsODAwLjEyNyAzNDMuNDE1LDgwMi44NiAzNDMuMzc2LDgwOC43MzggMzQzLjM3Niw4MTAuNzAzIDM0My41MzMsODEyLjk5NCAzNDMuODM4LDgxNS44NDQgMzQ3LjczLDg1Mi45NSAzODYuNTc2LDg2OC4wMjkgNDQwLjU1LDg1My4zMDQgNDYzLjE0Nyw4NDcuMTUxIDQ3OC44NDUsODMxLjkyNSA0ODEuMDI3LDgxNC4wMzYgNDgyLjI5NSw4MDMuNCA0ODEuNTA5LDc5OS4wNDYgNDc3LjU0Nyw3OTQuNTkzIDQ3Mi43OCw3ODkuMjA2IDQ2OC40OTUsNzg4LjgxMyA0MTQuODg1LDc4OC4zNjEgWiIgZmlsbD0iI2Y4ZjgwMSIgLz48L2c+PC9zdmc+Cg==");
+
+/***/ }),
+
+/***/ "./src/blocks/review-date/svg/review-date-icon.svg":
+/*!*********************************************************!*\
+  !*** ./src/blocks/review-date/svg/review-date-icon.svg ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: function() { return /* binding */ SvgReviewDateIcon; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _path;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgReviewDateIcon = function SvgReviewDateIcon(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlSpace: "preserve",
+    viewBox: "0 0 24 24"
+  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M7.3 2.6a.8.8 0 0 0-.7.7v.3A2.8 2.8 0 0 0 4 6.3v3.5c0 1.5 1.2 2.8 2.7 2.8h5c1.5 0 2.8-1.3 2.8-2.8V6.3c0-1.4-1.2-2.6-2.5-2.7v-.3a.8.8 0 0 0-.8-.7.8.8 0 0 0-.7.7v.3H8v-.3a.8.8 0 0 0-.8-.7zM8 5h2.6a.8.8 0 0 0 .7.7.8.8 0 0 0 .7-.7c.6 0 1 .6 1 1.2v3.5c0 .7-.5 1.3-1.2 1.3h-5c-.7 0-1.2-.6-1.2-1.3V6.3c0-.6.4-1.1 1-1.2a.8.8 0 0 0 .7.7A.8.8 0 0 0 8 5zm-.8 1.4a.8.8 0 0 1 .1 0h-.1zm0 0a.8.8 0 0 0-.7.7.8.8 0 0 0 .8.8.8.8 0 0 0 .7-.8.8.8 0 0 0-.8-.7zm2 0a.8.8 0 0 1 .1 0h-.1zm0 0a.8.8 0 0 0-.7.7.8.8 0 0 0 .8.8.8.8 0 0 0 .7-.8.8.8 0 0 0-.8-.7zm2 0a.8.8 0 0 1 .1 0h-.1zm0 0a.8.8 0 0 0-.7.7.8.8 0 0 0 .8.8.8.8 0 0 0 .7-.8.8.8 0 0 0-.8-.7zm-4 2.2a.8.8 0 0 1 .1 0h-.1zm0 0a.8.8 0 0 0-.7.7.8.8 0 0 0 .8.8.8.8 0 0 0 .7-.8.8.8 0 0 0-.8-.7zm2 0a.8.8 0 0 1 .1 0h-.1zm0 0a.8.8 0 0 0-.7.7.8.8 0 0 0 .8.8.8.8 0 0 0 .7-.8.8.8 0 0 0-.8-.7zM8 14.2l-1 2.7H4l2.3 1.8-.8 2.8 2.4-1.7 2.4 1.7-.9-2.8 2.4-1.8h-3l-.9-2.7zm8.2 0-1 2.7h-2.9l2.4 1.8-.9 2.8 2.4-1.7 2.4 1.7-.8-2.8L20 17h-3l-.9-2.8z"
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPHBhdGggZD0iTTcuMyAyLjZhLjguOCAwIDAgMC0uNy43di4zQTIuOCAyLjggMCAwIDAgNCA2LjN2My41YzAgMS41IDEuMiAyLjggMi43IDIuOGg1YzEuNSAwIDIuOC0xLjMgMi44LTIuOFY2LjNjMC0xLjQtMS4yLTIuNi0yLjUtMi43di0uM2EuOC44IDAgMCAwLS44LS43LjguOCAwIDAgMC0uNy43di4zSDh2LS4zYS44LjggMCAwIDAtLjgtLjd6TTggNWgyLjZhLjguOCAwIDAgMCAuNy43LjguOCAwIDAgMCAuNy0uN2MuNiAwIDEgLjYgMSAxLjJ2My41YzAgLjctLjUgMS4zLTEuMiAxLjNoLTVjLS43IDAtMS4yLS42LTEuMi0xLjNWNi4zYzAtLjYuNC0xLjEgMS0xLjJhLjguOCAwIDAgMCAuNy43QS44LjggMCAwIDAgOCA1em0tLjggMS40YS44LjggMCAwIDEgLjEgMGgtLjF6bTAgMGEuOC44IDAgMCAwLS43LjcuOC44IDAgMCAwIC44LjguOC44IDAgMCAwIC43LS44LjguOCAwIDAgMC0uOC0uN3ptMiAwYS44LjggMCAwIDEgLjEgMGgtLjF6bTAgMGEuOC44IDAgMCAwLS43LjcuOC44IDAgMCAwIC44LjguOC44IDAgMCAwIC43LS44LjguOCAwIDAgMC0uOC0uN3ptMiAwYS44LjggMCAwIDEgLjEgMGgtLjF6bTAgMGEuOC44IDAgMCAwLS43LjcuOC44IDAgMCAwIC44LjguOC44IDAgMCAwIC43LS44LjguOCAwIDAgMC0uOC0uN3ptLTQgMi4yYS44LjggMCAwIDEgLjEgMGgtLjF6bTAgMGEuOC44IDAgMCAwLS43LjcuOC44IDAgMCAwIC44LjguOC44IDAgMCAwIC43LS44LjguOCAwIDAgMC0uOC0uN3ptMiAwYS44LjggMCAwIDEgLjEgMGgtLjF6bTAgMGEuOC44IDAgMCAwLS43LjcuOC44IDAgMCAwIC44LjguOC44IDAgMCAwIC43LS44LjguOCAwIDAgMC0uOC0uN3pNOCAxNC4ybC0xIDIuN0g0bDIuMyAxLjgtLjggMi44IDIuNC0xLjcgMi40IDEuNy0uOS0yLjggMi40LTEuOGgtM2wtLjktMi43em04LjIgMC0xIDIuN2gtMi45bDIuNCAxLjgtLjkgMi44IDIuNC0xLjcgMi40IDEuNy0uOC0yLjhMMjAgMTdoLTNsLS45LTIuOHoiLz4KPC9zdmc+Cg==");
+
+/***/ }),
+
+/***/ "./src/blocks/review-date/edit.js":
+/*!****************************************!*\
+  !*** ./src/blocks/review-date/edit.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ Edit; }
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/edit-post */ "@wordpress/edit-post");
-/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _data_review_definition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../data/review-definition */ "./data/review-definition.json");
+/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/core-data */ "@wordpress/core-data");
+/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_core_data__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./block.json */ "./src/blocks/review-date/block.json");
+/* harmony import */ var _data_review_definition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../data/review-definition */ "./data/review-definition.json");
 
 
 
@@ -37,138 +103,94 @@ __webpack_require__.r(__webpack_exports__);
 
 const {
   prefix,
+  label,
   key,
   customFields
 } = _data_review_definition__WEBPACK_IMPORTED_MODULE_7__;
 
 /**
- * Add a metabox for all post custom fields.
+ * Editor Handler.
  * 
- * @see https://kinsta.com/blog/wordpress-add-meta-box-to-post/ 
+ * This block provides a meta field for a custom post type. The block should never exist in the
+ * custom post content, as it must be available to the query loop templates for layout customization
+ * in the editor.
+ * 
+ *  - Content fields are only editable in the post type editor via the metabox panel.
+ *  - Block attributes are only editable in all other editor contexts.
+ * 
+ * Inputs, values and setters are generated dynamically so that custom fields can be defined in
+ * an external JSON file. The long-term plan is to enable users to define which fields they want to
+ * include with the post type.
+ *
+ * This block consumes context from the query loop. See "usesContext" in block.json.
+ * @link: https://github.com/WordPress/gutenberg/blob/trunk/packages/block-library/src/post-excerpt/block.json
  */
-const MetaBox = ({
-  postType,
-  metaFields,
-  setMetaFields
-}) => {
-  if (postType !== key) return null;
+function Edit({
+  isSelected,
+  context: {
+    postId,
+    postType,
+    queryId
+  }
+}) {
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.useBlockProps)();
 
-  // Dynamically build an object array of meta fields for output in the panel.
-  let fields = [];
+  // Fallback to check if we're in the post editor for this CPT.
+  const isPostEditorContext = key === (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select('core/editor').getCurrentPostType());
+  if (isPostEditorContext) return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Error: This block cannot be used inside the ${label} post type!`);
+
+  // Fallback to check if the block has been used outside of a query loop for the CPT.
+  const isDescendentOfQueryLoop = Number.isFinite(queryId);
+  const isCorrectPostType = key === postType;
+  const isValidContext = isDescendentOfQueryLoop && isCorrectPostType;
+  if (!isValidContext) return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Error: This block must be used inside a ${label} post type query loop!`);
+  const [meta] = (0,_wordpress_core_data__WEBPACK_IMPORTED_MODULE_4__.useEntityProp)('postType', postType, 'meta', postId);
+  let field = {};
   customFields.forEach(customField => {
-    const metaKey = prefix + key + customField.suffix;
-    const value = metaFields[metaKey] || '';
-    const inputType = customField.input_type;
-    fields.push({
-      'metaKey': metaKey,
-      'value': value,
-      'updateValue': newValue => setMetaFields({
-        [metaKey]: newValue
-      }),
-      'label': customField.label,
-      'description': customField.description,
-      'type': inputType,
-      'placeholder': customField?.placeholder || '',
-      'required': customField?.required || '',
-      'maxlength': customField?.length_limit || '',
-      'max': customField?.max_value || '',
-      'min': customField?.min_value || '',
-      'step': customField?.value_step || '',
-      'media': inputType === 'image-upload' ? (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select("core").getMedia(value)) : false
-    });
-  });
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, fields.map(field => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4__.PluginDocumentSettingPanel, {
-    key: field.metaKey,
-    name: field.metaKey + '-panel',
-    title: field.label,
-    initialOpen: true
-  }, field.type === 'text' || field.type === 'email' || field.type === 'url' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
-    label: field.description,
-    value: field.value,
-    onChange: field.updateValue,
-    type: field.type,
-    placeholder: field.placeholder,
-    required: field.required,
-    maxLength: field.maxlength
-  })), field.type === 'number' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
-    label: field.description,
-    value: field.value,
-    onChange: field.updateValue,
-    type: field.type,
-    placeholder: field.placeholder,
-    required: field.required,
-    max: field.max_value,
-    min: field.min_value,
-    step: field.value_step
-  })), field.type === 'date' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
-    label: field.description,
-    value: field.value,
-    onChange: field.updateValue,
-    type: field.type,
-    placeholder: field.placeholder,
-    required: field.required
-  })), field.type === 'number' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
-    label: field.description,
-    value: field.value,
-    onChange: field.updateValue,
-    type: field.type,
-    placeholder: field.placeholder,
-    required: field.required,
-    maxLength: field.maxlength
-  })), field.type === 'image-upload' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUpload, {
-    onSelect: newMedia => field.updateValue(newMedia.id),
-    value: field.value,
-    allowedTypes: ['image'],
-    render: ({
-      open
-    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
-      className: !field.value ? 'editor-post-featured-image__toggle' : 'editor-post-featured-image__preview',
-      onClick: open
-    }, !field.value && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Set an icon', 'bigup-cpt-service'), field.media !== undefined && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ResponsiveWrapper, {
-      naturalWidth: field.media.media_details.width,
-      naturalHeight: field.media.media_details.height
-    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-      src: field.media.source_url
-    })))
-  }))), field.value && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUpload, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Replace image', 'bigup-cpt-service'),
-    value: field.value,
-    onSelect: newMedia => field.updateValue(newMedia.id),
-    allowedTypes: ['image'],
-    render: ({
-      open
-    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
-      onClick: open,
-      variant: "secondary",
-      isLarge: true
-    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Replace icon', 'bigup-cpt-service'))
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
-    onClick: () => field.updateValue(0),
-    variant: "secondary",
-    isLarge: true
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Remove icon', 'bigup-cpt-service'))))))));
-};
-const applyWithSelect = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withSelect)(select => {
-  return {
-    metaFields: select('core/editor').getEditedPostAttribute('meta'),
-    postType: select('core/editor').getCurrentPostType()
-  };
-});
-const applyWithDispatch = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withDispatch)(dispatch => {
-  return {
-    setMetaFields(newValue) {
-      dispatch('core/editor').editPost({
-        meta: newValue
-      });
+    if (customField['block_name'] === _block_json__WEBPACK_IMPORTED_MODULE_6__.name) {
+      field = customField;
+      field.metaKey = prefix + key + customField.suffix;
+      field.value = meta[field.metaKey];
     }
-  };
-});
-/* harmony default export */ __webpack_exports__["default"] = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__.compose)([applyWithSelect, applyWithDispatch])(MetaBox));
-MetaBox.propTypes = {
-  postType: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
-  metaFields: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
-  setMetaFields: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func)
+  });
+  const postEditUri = 'post.php?post=' + postId + '&action=edit';
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, isSelected && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Settings'),
+    initialOpen: true
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    href: postEditUri
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Edit this review to set the name'))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...blockProps
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, field.value ? '~ ' + field.value : field.placeholder))));
+}
+Edit.propTypes = {
+  context: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
+  isSelected: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool)
 };
+
+/***/ }),
+
+/***/ "./src/blocks/review-date/svg.js":
+/*!***************************************!*\
+  !*** ./src/blocks/review-date/svg.js ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Icon: function() { return /* reexport safe */ _svg_review_date_icon_svg__WEBPACK_IMPORTED_MODULE_1__.ReactComponent; },
+/* harmony export */   Logo: function() { return /* reexport safe */ _assets_svg_bigup_logo_svg__WEBPACK_IMPORTED_MODULE_0__.ReactComponent; }
+/* harmony export */ });
+/* harmony import */ var _assets_svg_bigup_logo_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/svg/bigup-logo.svg */ "./assets/svg/bigup-logo.svg");
+/* harmony import */ var _svg_review_date_icon_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./svg/review-date-icon.svg */ "./src/blocks/review-date/svg/review-date-icon.svg");
+/**
+ * Webpack entry point.
+ */
+
+
+
+
 
 /***/ }),
 
@@ -1297,6 +1319,17 @@ module.exports = window["wp"]["blockEditor"];
 
 /***/ }),
 
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
 /***/ "@wordpress/components":
 /*!************************************!*\
   !*** external ["wp","components"] ***!
@@ -1308,14 +1341,14 @@ module.exports = window["wp"]["components"];
 
 /***/ }),
 
-/***/ "@wordpress/compose":
-/*!*********************************!*\
-  !*** external ["wp","compose"] ***!
-  \*********************************/
+/***/ "@wordpress/core-data":
+/*!**********************************!*\
+  !*** external ["wp","coreData"] ***!
+  \**********************************/
 /***/ (function(module) {
 
 "use strict";
-module.exports = window["wp"]["compose"];
+module.exports = window["wp"]["coreData"];
 
 /***/ }),
 
@@ -1330,17 +1363,6 @@ module.exports = window["wp"]["data"];
 
 /***/ }),
 
-/***/ "@wordpress/edit-post":
-/*!**********************************!*\
-  !*** external ["wp","editPost"] ***!
-  \**********************************/
-/***/ (function(module) {
-
-"use strict";
-module.exports = window["wp"]["editPost"];
-
-/***/ }),
-
 /***/ "@wordpress/i18n":
 /*!******************************!*\
   !*** external ["wp","i18n"] ***!
@@ -1352,17 +1374,6 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
-/***/ "@wordpress/plugins":
-/*!*********************************!*\
-  !*** external ["wp","plugins"] ***!
-  \*********************************/
-/***/ (function(module) {
-
-"use strict";
-module.exports = window["wp"]["plugins"];
-
-/***/ }),
-
 /***/ "./data/review-definition.json":
 /*!*************************************!*\
   !*** ./data/review-definition.json ***!
@@ -1371,6 +1382,17 @@ module.exports = window["wp"]["plugins"];
 
 "use strict";
 module.exports = JSON.parse('{"key":"review","label":"Reviews","slug":"edit.php?post_type=review","prefix":"_bigup_","metaboxID":"review-meta","definition":{"labels":{"name":"Reviews","singular_name":"Review","add_new":"New Review","add_new_item":"Add New Review","edit_item":"Edit Review","new_item":"New Review","view_item":"View Review","search_items":"Search Reviews","not_found":"No Reviews Found","not_found_in_trash":"No Reviews found in Trash"},"supports":["title","editor","thumbnail","excerpt","custom-fields"],"description":"Feedback and reviews.","public":true,"exclude_from_search":false,"publicly_queryable":true,"query_var":true,"show_in_menu":true,"menu_position":5,"menu_icon":"dashicons-thumbs-up","hierarchical":false,"taxonomies":["category","post_tag"],"has_archive":"reviews","show_in_rest":true,"delete_with_user":false,"rewrite":{"slug":"reviews"}},"customFields":[{"block_name":"bigup-reviews/review-name","suffix":"_name","label":"Name","description":"Name of the reviewer","type":"string","input_type":"text","placeholder":"Add a name","length_limit":"50","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_email","label":"Email","description":"Email address of the reviewer","type":"string","input_type":"email","placeholder":"Add an email address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_ip","label":"IP Address","description":"IP address the review was submitted from","type":"string","input_type":"text","placeholder":"Add an email address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-date","suffix":"_date","label":"Date","description":"Date the original review was published","type":"string","input_type":"date","placeholder":"Add a date","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-source-url","suffix":"_source_url","label":"Source URL","description":"Link to the original review source","type":"string","input_type":"url","placeholder":"Add a source URL","length_limit":"2048","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-rating","suffix":"_rating","label":"Rating","description":"The review rating out of 5","type":"number","input_type":"number","placeholder":"Add a rating","max_value":"5","min_value":"0","value_step":".0.1","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-avatar","suffix":"_avatar","label":"Avatar","description":"Avatar (image) of the reviewer","type":"integer","input_type":"image-upload","placeholder":"Add an avatar","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"}]}');
+
+/***/ }),
+
+/***/ "./src/blocks/review-date/block.json":
+/*!*******************************************!*\
+  !*** ./src/blocks/review-date/block.json ***!
+  \*******************************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse('{"$schema":"https://json.schemastore.org/block.json","apiVersion":2,"name":"bigup-reviews/review-date","version":"0.1.0","title":"Reviewer Date","category":"theme","icon":"smiley","description":"Date the original review was published","usesContext":["postId","postType","queryId"],"textdomain":"bigup-reviews","editorScript":"file:./index.js","supports":{"html":false},"ancestor":["bigup-reviews/review"]}');
 
 /***/ })
 
@@ -1446,26 +1468,55 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 !function() {
 "use strict";
-/*!******************************!*\
-  !*** ./src/metaboxPlugin.js ***!
-  \******************************/
+/*!*****************************************!*\
+  !*** ./src/blocks/review-date/index.js ***!
+  \*****************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/plugins */ "@wordpress/plugins");
-/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_MetaBox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/MetaBox */ "./src/components/MetaBox.js");
-/**
- * Register a plugin to add items to the Gutenberg Toolbar.
- * 
- * This main index file is enqueued by the PHP Init class.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-sidebar/
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg */ "./src/blocks/review-date/svg.js");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/review-date/edit.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/blocks/review-date/block.json");
+
+
+
+
+
+
+/*
+ * Debug.
+ * console.log( metadata.name + ' BLOCK LOADED' )
+ * RUN IN CONSOLE TO SEE REGISTERED BLOCKS: wp.blocks.getBlockTypes() 
  */
 
-
-(0,_wordpress_plugins__WEBPACK_IMPORTED_MODULE_0__.registerPlugin)('bigup-cpt-review-metabox', {
-  render: _components_MetaBox__WEBPACK_IMPORTED_MODULE_1__["default"]
+/**
+ * Register the collection.
+ * 
+ * COLLECTIONS ARE NOT CATEGORIES!
+ * @link https://make.wordpress.org/core/2020/02/27/block-collections/
+ */
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockCollection)('bigupweb', {
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Bigup Web'),
+  icon: _svg__WEBPACK_IMPORTED_MODULE_2__.Logo
+});
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
+  ..._block_json__WEBPACK_IMPORTED_MODULE_4__,
+  icon: _svg__WEBPACK_IMPORTED_MODULE_2__.Icon,
+  /**
+   * @see ./edit.js
+   */
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  /*
+   * This is a dynamic content block meaning the data is rendered server-side at runtime. This
+   * block forms a 'template' for the dynamic post data retrieved by a query-loop. The output of the
+   * block in the editor is defined by the Edit function above. The output of the block on the
+   * frontend is defined by the render_callback function. See PHP function register_block_type().
+   */
+  save: () => null
 });
 }();
 /******/ })()
 ;
-//# sourceMappingURL=metaboxPlugin.js.map
+//# sourceMappingURL=index.js.map

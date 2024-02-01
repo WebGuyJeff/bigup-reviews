@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "bigup-reviews/review",
+  "version": "0.1.0",
+  "title": "Review",
+  "category": "theme",
+  "icon": "smiley",
+  "description": "Display a single review.",
+  "textdomain": "bigup-reviews",
+  "editorScript": "file:./index.js",
+  "usesContext": [
+    "postId",
+    "postType",
+    "queryId"
+  ],
+  "providesContext": {
+    "bigup-reviews/reviewId": "reviewId"
+  },
+  "attributes": {
+    "reviewId": {
+      "type": "integer"
+    }
+  },
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true
+    },
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true
+    },
+    "position": {
+      "sticky": true
+    }
+  }
+}

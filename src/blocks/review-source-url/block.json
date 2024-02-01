@@ -8,15 +8,8 @@
 	"icon": "smiley",
 	"description": "Source URL custom field for the 'Review' custom post type",
 	"usesContext": [ "postId", "postType", "queryId" ],
-	"supports": {
-		"html": false
-	},
-	"textdomain": "bigupweb-review-source-url",
+	"textdomain": "bigup-reviews",
 	"editorScript": "file:./index.js",
-	"attributes": {
-		"linkText": {
-			"type": "string",
-			"default": "See review source"
-		}
-	}
+	"supports": { "html": false },
+	"ancestor": [ "bigup-reviews/review" ]
 }
