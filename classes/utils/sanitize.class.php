@@ -4,7 +4,7 @@ namespace BigupWeb\Reviews;
 /**
  * Sanitization methods.
  *
- * @package bigup-cpt-review
+ * @package bigup-reviews
  */
 class Sanitize {
 
@@ -24,6 +24,9 @@ class Sanitize {
 
 			case 'text':
 				return array( new Sanitize(), 'text' );
+
+			case 'date':
+				return array( new Sanitize(), 'date' );
 
 			case 'url':
 				return array( new Sanitize(), 'url' );
@@ -51,6 +54,9 @@ class Sanitize {
 
 			case 'general_api_key':
 				return array( new Sanitize(), 'general_api_key' );
+
+			case 'image-upload':
+				return array( new Sanitize(), 'image_id' );
 
 			default:
 				error_log( "Bigup Plugin: Invalid sanitize type '{$type}' passed with option" );
@@ -90,6 +96,17 @@ class Sanitize {
 
 		$clean_text = sanitize_text_field( $text );
 		return $clean_text;
+	}
+
+
+	/**
+	 * Sanitize a date.
+	 */
+	public static function date( $date ) {
+
+		$sanitized_string = sanitize_text_field( $date );
+		$clean_date       = strtotime( $sanitized_string );
+		return $clean_date;
 	}
 
 
@@ -195,5 +212,22 @@ class Sanitize {
 	public static function general_api_key( $general_api_key ) {
 		$clean_general_api_key = preg_replace( '/[^+-_.\p{L}\p{N}]/', '', $general_api_key );
 		return $clean_general_api_key;
+	}
+
+
+	/**
+	 * Sanitize an image ID.
+	 */
+	public static function image_id( $image_id ) {
+
+		$int    = (int) $image_id;
+		$exists = wp_get_attachment_image( $int );
+
+		$clean_image_id = 0;
+		if ( $exists ) {
+			$clean_image_id = $int;
+		}
+
+		return $clean_image_id;
 	}
 }

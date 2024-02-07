@@ -10,9 +10,9 @@ namespace BigupWeb\Reviews;
  * Author:            Jefferson Real
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       bigup-cpt-review
+ * Text Domain:       bigup-reviews
  *
- * @package           bigup-cpt-review
+ * @package           bigup-reviews
  * @link              https://kinsta.com/blog/dynamic-blocks/
  * @link              https://kinsta.com/blog/wordpress-add-meta-box-to-post/
  * @link              https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/creating-dynamic-blocks/
@@ -21,12 +21,14 @@ namespace BigupWeb\Reviews;
 $enable_debug = false;
 
 // Define constants.
-define( 'CPTREV_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true && $enable_debug );
-define( 'CPTREV_DIR', trailingslashit( __DIR__ ) );
-define( 'CPTREV_URL', trailingslashit( get_site_url( null, strstr( __DIR__, '/wp-content/' ) ) ) );
+define( 'BIGUPREVIEWS_DEBUG', $enable_debug );
+define( 'BIGUPREVIEWS_PATH', trailingslashit( __DIR__ ) );
+define( 'BIGUPREVIEWS_URL', trailingslashit( get_site_url( null, strstr( __DIR__, '/wp-content/' ) ) ) );
 
-// Setup PHP namespace.
-require_once CPTREV_DIR . 'classes/autoload.php';
+// Register namespaced autoloader.
+$namespace = 'BigupWeb\\Reviews\\';
+$root      = BIGUPREVIEWS_PATH . 'classes/';
+require_once $root . 'autoload.php';
 
 // Setup this plugin.
 $Init = new Init();

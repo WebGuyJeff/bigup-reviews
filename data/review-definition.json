@@ -80,7 +80,7 @@
 			"description": "IP address the review was submitted from",
 			"type": "string",
 			"input_type": "text",
-			"placeholder": "Add an email address",
+			"placeholder": "Add reviewer IP address",
 			"length_limit": "320",
 			"required": "",
 			"show_in_rest": "true",

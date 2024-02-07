@@ -5,7 +5,6 @@ import {
 	Icon
 } from './svg'
 import Edit from './edit'
-import save from './save' // Unsure if I need this yet. Will this block be dynamic or static?
 import metadata from './block.json'
 
 /*

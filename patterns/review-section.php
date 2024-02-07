@@ -52,8 +52,8 @@ $markup = <<<END
 END;
 
 return array(
-	'title'       => __( 'Review Query Loop', 'bigup-cpt-review' ),
-	'description' => _x( 'Display latest reviews as wrapping-cards', 'Block pattern description', 'bigup-cpt-review' ),
+	'title'       => __( 'Review Query Loop', 'bigup-reviews' ),
+	'description' => _x( 'Display latest reviews as wrapping-cards', 'Block pattern description', 'bigup-reviews' ),
 	'categories'  => array( 'bigup-reviews' ),
 	'keywords'    => array( 'reviews', 'section' ),
 	'content'     => $markup,

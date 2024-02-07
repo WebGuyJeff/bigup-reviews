@@ -4,9 +4,9 @@ namespace BigupWeb\Reviews;
 /**
  * Register custom meta box for the classic editor.
  *
- * @package bigup-cpt-review
+ * @package bigup-reviews
  */
-class Editor_Classic {
+class Metabox_Classic {
 
 	/**
 	 * Custom post type key.

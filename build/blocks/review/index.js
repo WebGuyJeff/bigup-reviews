@@ -132,8 +132,6 @@ function Edit({
     queryId
   }
 }) {
-  // Debug.
-  console.log(_block_json__WEBPACK_IMPORTED_MODULE_6__.name, 'LOADED!');
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.useBlockProps)();
   const ALLOWED_BLOCKS = ['bigup-reviews/review-name', 'bigup-reviews/review-avatar', 'bigup-reviews/review-date', 'bigup-reviews/review-rating', 'bigup-reviews/review-source-url', 'core/columns', 'core/group', 'core/heading', 'core/paragraph', 'core/spacer'];
 
@@ -145,7 +143,7 @@ function Edit({
   const isDescendentOfQueryLoop = Number.isFinite(queryId);
   const isCorrectPostType = key === postType;
   const isValidContext = isDescendentOfQueryLoop && isCorrectPostType;
-  if (!isValidContext) return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Error: This block must be used inside a ${label} post type query loop!`);
+  if (!isValidContext) return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Error: This block must be used inside a ${label.toLowerCase()} post type query loop!`);
   const [meta] = (0,_wordpress_core_data__WEBPACK_IMPORTED_MODULE_4__.useEntityProp)('postType', postType, 'meta', postId);
   let field = {};
   customFields.forEach(customField => {
@@ -156,6 +154,9 @@ function Edit({
     }
   });
   const postEditUri = 'post.php?post=' + postId + '&action=edit';
+
+  // Create a dropdown to select a single fixed review to display.
+  const reviews = wp.data.select('core').getEntityRecords('postType', 'reviews');
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, isSelected && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Settings'),
     initialOpen: true
@@ -171,35 +172,6 @@ Edit.propTypes = {
   context: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
   isSelected: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool)
 };
-
-/***/ }),
-
-/***/ "./src/blocks/review/save.js":
-/*!***********************************!*\
-  !*** ./src/blocks/review/save.js ***!
-  \***********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ save; }
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-function save() {
-  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save();
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...blockProps
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null));
-}
 
 /***/ }),
 
@@ -1414,7 +1386,7 @@ module.exports = window["wp"]["i18n"];
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"key":"review","label":"Reviews","slug":"edit.php?post_type=review","prefix":"_bigup_","metaboxID":"review-meta","definition":{"labels":{"name":"Reviews","singular_name":"Review","add_new":"New Review","add_new_item":"Add New Review","edit_item":"Edit Review","new_item":"New Review","view_item":"View Review","search_items":"Search Reviews","not_found":"No Reviews Found","not_found_in_trash":"No Reviews found in Trash"},"supports":["title","editor","thumbnail","excerpt","custom-fields"],"description":"Feedback and reviews.","public":true,"exclude_from_search":false,"publicly_queryable":true,"query_var":true,"show_in_menu":true,"menu_position":5,"menu_icon":"dashicons-thumbs-up","hierarchical":false,"taxonomies":["category","post_tag"],"has_archive":"reviews","show_in_rest":true,"delete_with_user":false,"rewrite":{"slug":"reviews"}},"customFields":[{"block_name":"bigup-reviews/review-name","suffix":"_name","label":"Name","description":"Name of the reviewer","type":"string","input_type":"text","placeholder":"Add a name","length_limit":"50","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_email","label":"Email","description":"Email address of the reviewer","type":"string","input_type":"email","placeholder":"Add an email address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_ip","label":"IP Address","description":"IP address the review was submitted from","type":"string","input_type":"text","placeholder":"Add an email address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-date","suffix":"_date","label":"Date","description":"Date the original review was published","type":"string","input_type":"date","placeholder":"Add a date","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-source-url","suffix":"_source_url","label":"Source URL","description":"Link to the original review source","type":"string","input_type":"url","placeholder":"Add a source URL","length_limit":"2048","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-rating","suffix":"_rating","label":"Rating","description":"The review rating out of 5","type":"number","input_type":"number","placeholder":"Add a rating","max_value":"5","min_value":"0","value_step":".0.1","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-avatar","suffix":"_avatar","label":"Avatar","description":"Avatar (image) of the reviewer","type":"integer","input_type":"image-upload","placeholder":"Add an avatar","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"}]}');
+module.exports = JSON.parse('{"key":"review","label":"Reviews","slug":"edit.php?post_type=review","prefix":"_bigup_","metaboxID":"review-meta","definition":{"labels":{"name":"Reviews","singular_name":"Review","add_new":"New Review","add_new_item":"Add New Review","edit_item":"Edit Review","new_item":"New Review","view_item":"View Review","search_items":"Search Reviews","not_found":"No Reviews Found","not_found_in_trash":"No Reviews found in Trash"},"supports":["title","editor","thumbnail","excerpt","custom-fields"],"description":"Feedback and reviews.","public":true,"exclude_from_search":false,"publicly_queryable":true,"query_var":true,"show_in_menu":true,"menu_position":5,"menu_icon":"dashicons-thumbs-up","hierarchical":false,"taxonomies":["category","post_tag"],"has_archive":"reviews","show_in_rest":true,"delete_with_user":false,"rewrite":{"slug":"reviews"}},"customFields":[{"block_name":"bigup-reviews/review-name","suffix":"_name","label":"Name","description":"Name of the reviewer","type":"string","input_type":"text","placeholder":"Add a name","length_limit":"50","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_email","label":"Email","description":"Email address of the reviewer","type":"string","input_type":"email","placeholder":"Add an email address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_ip","label":"IP Address","description":"IP address the review was submitted from","type":"string","input_type":"text","placeholder":"Add reviewer IP address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-date","suffix":"_date","label":"Date","description":"Date the original review was published","type":"string","input_type":"date","placeholder":"Add a date","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-source-url","suffix":"_source_url","label":"Source URL","description":"Link to the original review source","type":"string","input_type":"url","placeholder":"Add a source URL","length_limit":"2048","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-rating","suffix":"_rating","label":"Rating","description":"The review rating out of 5","type":"number","input_type":"number","placeholder":"Add a rating","max_value":"5","min_value":"0","value_step":".0.1","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-avatar","suffix":"_avatar","label":"Avatar","description":"Avatar (image) of the reviewer","type":"integer","input_type":"image-upload","placeholder":"Add an avatar","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"}]}');
 
 /***/ }),
 
@@ -1425,7 +1397,7 @@ module.exports = JSON.parse('{"key":"review","label":"Reviews","slug":"edit.php?
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://json.schemastore.org/block.json","apiVersion":2,"name":"bigup-reviews/review","version":"0.1.0","title":"Review","category":"theme","icon":"smiley","description":"Display a single review.","textdomain":"bigup-reviews","editorScript":"file:./index.js","usesContext":["postId","postType","queryId"],"providesContext":{"bigup-reviews/reviewId":"reviewId"},"attributes":{"reviewId":{"type":"integer"}},"supports":{"html":false,"color":{"text":true,"background":true,"gradients":true},"spacing":{"margin":["top","bottom"],"padding":true},"position":{"sticky":true}}}');
+module.exports = JSON.parse('{"$schema":"https://json.schemastore.org/block.json","apiVersion":2,"name":"bigup-reviews/review","version":"0.1.0","title":"Review","category":"theme","icon":"smiley","description":"Display a single review.","textdomain":"bigup-reviews","editorScript":"file:./index.js","usesContext":["postId","postType","queryId"],"providesContext":{"bigup-reviews/reviewId":"reviewId"},"attributes":{"reviewId":{"type":"integer","default":0}},"supports":{"html":false,"color":{"text":true,"background":true,"gradients":true},"spacing":{"margin":["top","bottom"],"padding":true},"position":{"sticky":true}}}');
 
 /***/ })
 
@@ -1511,13 +1483,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg */ "./src/blocks/review/svg.js");
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/review/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/review/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./block.json */ "./src/blocks/review/block.json");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/blocks/review/block.json");
 
 
 
 
- // Unsure if I need this yet. Will this block be dynamic or static?
 
 
 /*
@@ -1536,8 +1506,8 @@ __webpack_require__.r(__webpack_exports__);
   title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Bigup Web'),
   icon: _svg__WEBPACK_IMPORTED_MODULE_2__.Logo
 });
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_5__.name, {
-  ..._block_json__WEBPACK_IMPORTED_MODULE_5__,
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
+  ..._block_json__WEBPACK_IMPORTED_MODULE_4__,
   icon: _svg__WEBPACK_IMPORTED_MODULE_2__.Icon,
   /**
    * @see ./edit.js

@@ -4,7 +4,7 @@ namespace BigupWeb\Reviews;
 /**
  * Utilities.
  *
- * @package bigup-cpt-review
+ * @package bigup-reviews
  */
 class Util {
 

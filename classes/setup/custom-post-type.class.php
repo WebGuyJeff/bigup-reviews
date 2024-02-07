@@ -4,7 +4,7 @@ namespace BigupWeb\Reviews;
 /**
  * Register custom post type.
  *
- * @package bigup-cpt-review
+ * @package bigup-reviews
  */
 class Custom_Post_Type {
 
@@ -49,7 +49,7 @@ class Custom_Post_Type {
 		$this->taxonomies = $definition['definition']['taxonomies'];
 
 		// Get menu icon svg and convert it to a data url.
-		$svg        = Util::get_contents( CPTREV_DIR . 'assets/svg/cpt-review-menu-icon.svg' );
+		$svg        = Util::get_contents( BIGUPREVIEWS_PATH . 'assets/svg/cpt-review-menu-icon.svg' );
 		$base64     = base64_encode( $svg );
 		$data_url   = 'data:image/svg+xml;base64,' . $base64;
 		$this->icon = $data_url;
@@ -71,6 +71,27 @@ class Custom_Post_Type {
 		}
 		if ( in_array( 'post_tag', $this->taxonomies, true ) ) {
 			register_taxonomy_for_object_type( 'post_tag', $this->key );
+		}
+	}
+
+
+	/**
+	 * Filter the allowed blocks for this post type.
+	 *
+	 * @param array $allowed_blocks The allowed blocks
+	 * @param array $editor_context The editor context
+	 */
+	public function allowed_block_types( $allowed_blocks, $editor_context ) {
+		$post_type = ( !! $editor_context->post ) ? $editor_context->post->post_type : false;
+		if ( $post_type && $this->key === $post_type ) {
+			$allowed_blocks = array(
+				'core/paragraph',
+				'core/list',
+				'core/list-item',
+			);
+			return $allowed_blocks;
+		} else {
+			return;
 		}
 	}
 }

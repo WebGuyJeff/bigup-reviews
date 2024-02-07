@@ -15,7 +15,8 @@
 	},
 	"attributes": {
 		"reviewId": {
-			"type": "integer"
+			"type": "integer",
+			"default": 0
 		}
 	},
 	"supports": {

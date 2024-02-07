@@ -3,7 +3,7 @@ namespace BigupWeb\Reviews;
 /**
  * Patterns Handler.
  * 
- * @package bigup-cpt-review
+ * @package bigup-reviews
  */
 use WP_Block_Pattern_Categories_Registry;
 
@@ -58,7 +58,7 @@ class Patterns {
 			),
 		);
 
-		$path = CPTREV_DIR . 'patterns';
+		$path = BIGUPREVIEWS_PATH . 'patterns';
 		$files = ( file_exists( $path ) ) ? scandir( $path ) : array();
 		if ( is_array( $files ) ) {
 			$filenames = preg_replace( '/\..*/', '', $files );
@@ -89,7 +89,7 @@ class Patterns {
 	 */
 	private function register_patterns() {
 		foreach ( $this->patterns as $pattern ) {
-			$file = CPTREV_DIR . 'patterns/' . $pattern . '.php';
+			$file = BIGUPREVIEWS_PATH . 'patterns/' . $pattern . '.php';
 			if ( ! is_file( $file ) ) {
 				continue;
 			}

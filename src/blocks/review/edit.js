@@ -30,18 +30,9 @@ export default function Edit( {
 	context: {
 		postId,
 		postType,
-		queryId }
+		queryId
+	}
 	} ) {
-
-
-
-
-// Debug.
-console.log( metadata.name, 'LOADED!' )
-
-
-
-
 
 	const blockProps = useBlockProps()
 
@@ -69,7 +60,7 @@ console.log( metadata.name, 'LOADED!' )
 	const isCorrectPostType = ( key === postType )
 	const isValidContext = ( isDescendentOfQueryLoop && isCorrectPostType )
 	if ( ! isValidContext ) return (
-		<p>{ `Error: This block must be used inside a ${label} post type query loop!` }</p>
+		<p>{ `Error: This block must be used inside a ${label.toLowerCase()} post type query loop!` }</p>
 	)
 
 	const [ meta ] = useEntityProp( 'postType', postType, 'meta', postId )
@@ -83,6 +74,9 @@ console.log( metadata.name, 'LOADED!' )
 	} )
 
 	const postEditUri = 'post.php?post=' + postId + '&action=edit'
+
+	// Create a dropdown to select a single fixed review to display.
+	const reviews = wp.data.select( 'core' ).getEntityRecords( 'postType', 'reviews' )
 
 	return (
 		<>

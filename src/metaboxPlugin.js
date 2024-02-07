@@ -8,6 +8,6 @@
 import { registerPlugin } from '@wordpress/plugins'
 import MetaBox from './components/MetaBox'
 
-registerPlugin( 'bigup-cpt-review-metabox', {
+registerPlugin( 'bigup-reviews-metabox', {
 	render: MetaBox
 } )

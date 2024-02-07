@@ -6,7 +6,7 @@ namespace BigupWeb\Reviews;
  *
  * A library of form input field templates.
  *
- * @package bigup-cpt-review
+ * @package bigup-reviews
  */
 
 class Get_Input {

@@ -1,6 +1,260 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/Controls.js":
+/*!************************************!*\
+  !*** ./src/components/Controls.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AnyTextControl: function() { return /* binding */ AnyTextControl; },
+/* harmony export */   DateControl: function() { return /* binding */ DateControl; },
+/* harmony export */   EmailControl: function() { return /* binding */ EmailControl; },
+/* harmony export */   ImageControl: function() { return /* binding */ ImageControl; },
+/* harmony export */   NumberControl: function() { return /* binding */ NumberControl; },
+/* harmony export */   UrlControl: function() { return /* binding */ UrlControl; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+
+const AnyTextControl = ({
+  data: {
+    label,
+    description,
+    value,
+    updateValue,
+    placeholder,
+    required,
+    maxlength
+  }
+}) => {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+    label: label,
+    help: description,
+    value: value,
+    onChange: updateValue,
+    type: 'text',
+    placeholder: placeholder,
+    required: required,
+    maxLength: maxlength
+  }));
+};
+const EmailControl = ({
+  data: {
+    label,
+    description,
+    value,
+    updateValue,
+    placeholder,
+    required,
+    maxlength
+  }
+}) => {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+    label: label,
+    help: description,
+    value: value,
+    onChange: updateValue,
+    type: 'email',
+    placeholder: placeholder,
+    required: required,
+    maxLength: maxlength
+  }));
+};
+const UrlControl = ({
+  data: {
+    label,
+    description,
+    value,
+    updateValue,
+    placeholder,
+    required,
+    maxlength
+  }
+}) => {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+    label: label,
+    help: description,
+    value: value,
+    onChange: updateValue,
+    type: 'text',
+    placeholder: placeholder,
+    required: required,
+    maxLength: maxlength
+  }));
+};
+const NumberControl = ({
+  data: {
+    label,
+    description,
+    value,
+    updateValue,
+    placeholder,
+    required,
+    max,
+    min,
+    step
+  }
+}) => {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+    label: label,
+    help: description,
+    value: value,
+    onChange: updateValue,
+    type: 'number',
+    placeholder: placeholder,
+    required: required,
+    max: max,
+    min: min,
+    step: step
+  }));
+};
+const DateControl = ({
+  data: {
+    label,
+    description,
+    value,
+    updateValue,
+    placeholder,
+    required
+  }
+}) => {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+    label: label,
+    help: description,
+    value: value,
+    onChange: updateValue,
+    type: 'date',
+    placeholder: placeholder,
+    required: required
+  }));
+};
+const ImageControl = ({
+  data: {
+    label,
+    value,
+    updateValue,
+    media
+  }
+}) => {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+    title: label,
+    onSelect: newMedia => updateValue(newMedia.id),
+    value: value,
+    allowedTypes: ['image'],
+    render: ({
+      open
+    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+      className: !value ? 'editor-post-featured-image__toggle' : 'editor-post-featured-image__preview',
+      onClick: open
+    }, !value && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select', 'bigup-reviews') + ' ' + label, media !== undefined && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ResponsiveWrapper, {
+      naturalWidth: media.media_details.width,
+      naturalHeight: media.media_details.height
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+      src: media.source_url
+    })))
+  }))), value && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+    title: label,
+    value: value,
+    onSelect: newMedia => updateValue(newMedia.id),
+    allowedTypes: ['image'],
+    render: ({
+      open
+    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+      onClick: open,
+      variant: "secondary",
+      isLarge: true
+    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Replace', 'bigup-reviews') + ' ' + label)
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    onClick: () => updateValue(0),
+    variant: "secondary",
+    isLarge: true
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Remove', 'bigup-reviews') + ' ' + label))));
+};
+AnyTextControl.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
+    label: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    description: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    value: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    updateValue: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func).isRequired,
+    placeholder: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    required: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool).isRequired,
+    maxlength: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number).isRequired
+  })
+};
+EmailControl.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
+    label: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    description: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    value: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    updateValue: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func).isRequired,
+    placeholder: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    required: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool).isRequired,
+    maxlength: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number).isRequired
+  })
+};
+UrlControl.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
+    label: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    description: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    value: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    updateValue: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func).isRequired,
+    placeholder: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    required: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool).isRequired,
+    maxlength: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number).isRequired
+  })
+};
+NumberControl.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
+    label: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    description: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    value: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    updateValue: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func).isRequired,
+    placeholder: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    required: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool).isRequired,
+    max: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number).isRequired,
+    min: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number).isRequired,
+    step: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number).isRequired
+  })
+};
+DateControl.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
+    label: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    description: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    value: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    updateValue: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func).isRequired,
+    placeholder: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    required: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool).isRequired
+  })
+};
+ImageControl.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
+    label: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string).isRequired,
+    value: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number).isRequired,
+    updateValue: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func).isRequired,
+    media: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().object).isRequired
+  })
+};
+
+
+/***/ }),
+
 /***/ "./src/components/MetaBox.js":
 /*!***********************************!*\
   !*** ./src/components/MetaBox.js ***!
@@ -13,20 +267,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/edit-post */ "@wordpress/edit-post");
 /* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _data_review_definition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../data/review-definition */ "./data/review-definition.json");
-
+/* harmony import */ var _Controls__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Controls */ "./src/components/Controls.js");
+/* harmony import */ var _data_review_definition__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../data/review-definition */ "./data/review-definition.json");
 
 
 
@@ -39,7 +289,7 @@ const {
   prefix,
   key,
   customFields
-} = _data_review_definition__WEBPACK_IMPORTED_MODULE_7__;
+} = _data_review_definition__WEBPACK_IMPORTED_MODULE_6__;
 
 /**
  * Add a metabox for all post custom fields.
@@ -59,7 +309,7 @@ const MetaBox = ({
     const metaKey = prefix + key + customField.suffix;
     const value = metaFields[metaKey] || '';
     const inputType = customField.input_type;
-    fields.push({
+    fields[customField.suffix] = {
       'metaKey': metaKey,
       'value': value,
       'updateValue': newValue => setMetaFields({
@@ -75,78 +325,26 @@ const MetaBox = ({
       'min': customField?.min_value || '',
       'step': customField?.value_step || '',
       'media': inputType === 'image-upload' ? (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select("core").getMedia(value)) : false
-    });
+    };
   });
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, fields.map(field => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4__.PluginDocumentSettingPanel, {
-    key: field.metaKey,
-    name: field.metaKey + '-panel',
-    title: field.label,
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4__.PluginDocumentSettingPanel, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Review Settings', 'bigup-reviews'),
     initialOpen: true
-  }, field.type === 'text' || field.type === 'email' || field.type === 'url' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
-    label: field.description,
-    value: field.value,
-    onChange: field.updateValue,
-    type: field.type,
-    placeholder: field.placeholder,
-    required: field.required,
-    maxLength: field.maxlength
-  })), field.type === 'number' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
-    label: field.description,
-    value: field.value,
-    onChange: field.updateValue,
-    type: field.type,
-    placeholder: field.placeholder,
-    required: field.required,
-    max: field.max_value,
-    min: field.min_value,
-    step: field.value_step
-  })), field.type === 'date' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
-    label: field.description,
-    value: field.value,
-    onChange: field.updateValue,
-    type: field.type,
-    placeholder: field.placeholder,
-    required: field.required
-  })), field.type === 'number' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
-    label: field.description,
-    value: field.value,
-    onChange: field.updateValue,
-    type: field.type,
-    placeholder: field.placeholder,
-    required: field.required,
-    maxLength: field.maxlength
-  })), field.type === 'image-upload' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUpload, {
-    onSelect: newMedia => field.updateValue(newMedia.id),
-    value: field.value,
-    allowedTypes: ['image'],
-    render: ({
-      open
-    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
-      className: !field.value ? 'editor-post-featured-image__toggle' : 'editor-post-featured-image__preview',
-      onClick: open
-    }, !field.value && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Set an icon', 'bigup-cpt-service'), field.media !== undefined && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ResponsiveWrapper, {
-      naturalWidth: field.media.media_details.width,
-      naturalHeight: field.media.media_details.height
-    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-      src: field.media.source_url
-    })))
-  }))), field.value && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUpload, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Replace image', 'bigup-cpt-service'),
-    value: field.value,
-    onSelect: newMedia => field.updateValue(newMedia.id),
-    allowedTypes: ['image'],
-    render: ({
-      open
-    }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
-      onClick: open,
-      variant: "secondary",
-      isLarge: true
-    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Replace icon', 'bigup-cpt-service'))
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
-    onClick: () => field.updateValue(0),
-    variant: "secondary",
-    isLarge: true
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Remove icon', 'bigup-cpt-service'))))))));
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Controls__WEBPACK_IMPORTED_MODULE_5__.AnyTextControl, {
+    data: fields['_name']
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Controls__WEBPACK_IMPORTED_MODULE_5__.EmailControl, {
+    data: fields['_email']
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Controls__WEBPACK_IMPORTED_MODULE_5__.UrlControl, {
+    data: fields['_source_url']
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Controls__WEBPACK_IMPORTED_MODULE_5__.AnyTextControl, {
+    data: fields['_ip']
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Controls__WEBPACK_IMPORTED_MODULE_5__.DateControl, {
+    data: fields['_date']
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Controls__WEBPACK_IMPORTED_MODULE_5__.NumberControl, {
+    data: fields['_rating']
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Controls__WEBPACK_IMPORTED_MODULE_5__.ImageControl, {
+    data: fields['_avatar']
+  }));
 };
 const applyWithSelect = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withSelect)(select => {
   return {
@@ -165,9 +363,9 @@ const applyWithDispatch = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withDi
 });
 /* harmony default export */ __webpack_exports__["default"] = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__.compose)([applyWithSelect, applyWithDispatch])(MetaBox));
 MetaBox.propTypes = {
-  postType: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
-  metaFields: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
-  setMetaFields: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func)
+  postType: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().string),
+  metaFields: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
+  setMetaFields: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func)
 };
 
 /***/ }),
@@ -1370,7 +1568,7 @@ module.exports = window["wp"]["plugins"];
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"key":"review","label":"Reviews","slug":"edit.php?post_type=review","prefix":"_bigup_","metaboxID":"review-meta","definition":{"labels":{"name":"Reviews","singular_name":"Review","add_new":"New Review","add_new_item":"Add New Review","edit_item":"Edit Review","new_item":"New Review","view_item":"View Review","search_items":"Search Reviews","not_found":"No Reviews Found","not_found_in_trash":"No Reviews found in Trash"},"supports":["title","editor","thumbnail","excerpt","custom-fields"],"description":"Feedback and reviews.","public":true,"exclude_from_search":false,"publicly_queryable":true,"query_var":true,"show_in_menu":true,"menu_position":5,"menu_icon":"dashicons-thumbs-up","hierarchical":false,"taxonomies":["category","post_tag"],"has_archive":"reviews","show_in_rest":true,"delete_with_user":false,"rewrite":{"slug":"reviews"}},"customFields":[{"block_name":"bigup-reviews/review-name","suffix":"_name","label":"Name","description":"Name of the reviewer","type":"string","input_type":"text","placeholder":"Add a name","length_limit":"50","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_email","label":"Email","description":"Email address of the reviewer","type":"string","input_type":"email","placeholder":"Add an email address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_ip","label":"IP Address","description":"IP address the review was submitted from","type":"string","input_type":"text","placeholder":"Add an email address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-date","suffix":"_date","label":"Date","description":"Date the original review was published","type":"string","input_type":"date","placeholder":"Add a date","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-source-url","suffix":"_source_url","label":"Source URL","description":"Link to the original review source","type":"string","input_type":"url","placeholder":"Add a source URL","length_limit":"2048","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-rating","suffix":"_rating","label":"Rating","description":"The review rating out of 5","type":"number","input_type":"number","placeholder":"Add a rating","max_value":"5","min_value":"0","value_step":".0.1","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-avatar","suffix":"_avatar","label":"Avatar","description":"Avatar (image) of the reviewer","type":"integer","input_type":"image-upload","placeholder":"Add an avatar","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"}]}');
+module.exports = JSON.parse('{"key":"review","label":"Reviews","slug":"edit.php?post_type=review","prefix":"_bigup_","metaboxID":"review-meta","definition":{"labels":{"name":"Reviews","singular_name":"Review","add_new":"New Review","add_new_item":"Add New Review","edit_item":"Edit Review","new_item":"New Review","view_item":"View Review","search_items":"Search Reviews","not_found":"No Reviews Found","not_found_in_trash":"No Reviews found in Trash"},"supports":["title","editor","thumbnail","excerpt","custom-fields"],"description":"Feedback and reviews.","public":true,"exclude_from_search":false,"publicly_queryable":true,"query_var":true,"show_in_menu":true,"menu_position":5,"menu_icon":"dashicons-thumbs-up","hierarchical":false,"taxonomies":["category","post_tag"],"has_archive":"reviews","show_in_rest":true,"delete_with_user":false,"rewrite":{"slug":"reviews"}},"customFields":[{"block_name":"bigup-reviews/review-name","suffix":"_name","label":"Name","description":"Name of the reviewer","type":"string","input_type":"text","placeholder":"Add a name","length_limit":"50","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_email","label":"Email","description":"Email address of the reviewer","type":"string","input_type":"email","placeholder":"Add an email address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":false,"suffix":"_ip","label":"IP Address","description":"IP address the review was submitted from","type":"string","input_type":"text","placeholder":"Add reviewer IP address","length_limit":"320","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-date","suffix":"_date","label":"Date","description":"Date the original review was published","type":"string","input_type":"date","placeholder":"Add a date","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-source-url","suffix":"_source_url","label":"Source URL","description":"Link to the original review source","type":"string","input_type":"url","placeholder":"Add a source URL","length_limit":"2048","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-rating","suffix":"_rating","label":"Rating","description":"The review rating out of 5","type":"number","input_type":"number","placeholder":"Add a rating","max_value":"5","min_value":"0","value_step":".0.1","required":"true","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"},{"block_name":"bigup-reviews/review-avatar","suffix":"_avatar","label":"Avatar","description":"Avatar (image) of the reviewer","type":"integer","input_type":"image-upload","placeholder":"Add an avatar","required":"","show_in_rest":"true","single":"true","user_capabilities":"edit_posts"}]}');
 
 /***/ })
 
@@ -1462,7 +1660,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-(0,_wordpress_plugins__WEBPACK_IMPORTED_MODULE_0__.registerPlugin)('bigup-cpt-review-metabox', {
+(0,_wordpress_plugins__WEBPACK_IMPORTED_MODULE_0__.registerPlugin)('bigup-reviews-metabox', {
   render: _components_MetaBox__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 }();
