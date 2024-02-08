@@ -57,7 +57,7 @@ class Init {
 		add_action( 'init', array( &$Metabox, 'setup_custom_fields' ), 11, 0 );
 
 		add_action( 'init', array( new Patterns(), 'register_all' ) );
-		add_action( 'enqueue_block_editor_assets', array( &$this, 'enqueue_editor_scripts' ) );
+		add_action( 'enqueue_block_editor_assets', array( &$this, 'editor_scripts_and_styles' ) );
 
 		// Enable WP custom fields even if ACF is installed.
 		add_filter( 'acf/settings/remove_wp_meta_box', '__return_false' );
@@ -77,8 +77,8 @@ class Init {
 	/**
 	 * Enqueue scripts for this plugin.
 	 */
-	public function enqueue_editor_scripts() {
-		wp_register_script( 'bigup_reviews_editor_js', BIGUPREVIEWS_URL . 'build/bigup-reviews-editor.js', array(), filemtime( BIGUPREVIEWS_PATH . 'build/bigup-reviews-editor.js' ), true );
-		wp_enqueue_script( 'bigup_reviews_editor_js' );
+	public function editor_scripts_and_styles() {
+		wp_enqueue_script( 'bigup_reviews_editor_js', BIGUPREVIEWS_URL . 'build/js/bigup-reviews-editor.js', array(), filemtime( BIGUPREVIEWS_PATH . 'build/js/bigup-reviews-editor.js' ), true );
+		wp_enqueue_style( 'bigup_reviews_editor_css', BIGUPREVIEWS_URL . 'build/css/bigup-reviews-editor.css', array(), filemtime( BIGUPREVIEWS_PATH . 'build/css/bigup-reviews-editor.css' ), 'all' );
 	}
 }

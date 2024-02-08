@@ -17,7 +17,7 @@ const AnyTextControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				title={ description }
+				help={ description }
 				value={ value }
 				onChange={ updateValue }
 				type={ 'text' }
@@ -42,7 +42,7 @@ const EmailControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				title={ description }
+				help={ description }
 				value={ value }
 				onChange={ updateValue }
 				type={ 'email' }
@@ -68,7 +68,7 @@ const UrlControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				title={ description }
+				help={ description }
 				value={ value }
 				onChange={ updateValue }
 				type={ 'url' }
@@ -96,7 +96,7 @@ const NumberControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				title={ description }
+				help={ description }
 				value={ value }
 				onChange={ updateValue }
 				type={ 'number' }
@@ -122,7 +122,8 @@ const DateControl = ( { data: {
 
 	let html5Date     = ''
 	const html5DateRe = '^\\d{4}-\\d{2}-\\d{2}$'
-	if ( ! value.toString().match( html5DateRe ) ) {
+
+	if ( value !== '' && ! value.toString().match( html5DateRe ) ) {
 		// Convert from unix timestamp to HTML5 date (yyyy-mm-dd).
 		const jsTimeStamp = new Date( value * 1000 )
 		const ISOString   = jsTimeStamp.toISOString()
@@ -135,13 +136,54 @@ const DateControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				title={ description }
+				help={ description }
 				value={ html5Date }
 				onChange={ updateValue }
 				type={ 'date' }
 				placeholder={ placeholder }
 				required={ required }
 			/>
+		</PanelRow>
+	)
+}
+
+const RatingControl = ( { data: {
+	label,
+	value,
+	updateValue,
+	max,
+	min,
+	step,
+	required
+} } ) => {
+
+	return(
+		<PanelRow>
+			<div
+				className={ 'ratingControl' }
+			>
+				<label
+					className={ 'ratingControl_label' }
+					htmlFor={ 'ratingControl_input' }
+				>
+					{ label + ': ' + value }
+				</label>
+				<input
+					className={ 'ratingControl_input' }
+					id={ 'ratingControl_input' }
+					onChange={ ( event ) => {
+						event.target.style.setProperty( '--value', event.target.value )
+						updateValue( event.target.value )
+					}}
+					style={{ '--value': '2.5' }}
+					type={ 'range' }
+					value={ value }
+					max={ max }
+					min={ min }
+					step={ step }
+					required={ required }
+				/>
+			</div>
 		</PanelRow>
 	)
 }
@@ -273,12 +315,25 @@ DateControl.propTypes = {
 	} )
 }
 
+RatingControl.propTypes = {
+	data: PropTypes.shape( {
+		label: PropTypes.string.isRequired,
+		value: PropTypes.number.isRequired,
+		updateValue: PropTypes.func.isRequired,
+		max: PropTypes.number.isRequired,
+		min: PropTypes.number.isRequired,
+		step: PropTypes.number.isRequired,
+		required: PropTypes.object.isRequired
+	} )
+}
+
+
 ImageControl.propTypes = {
 	data: PropTypes.shape( {
 		label: PropTypes.string.isRequired,
 		value: PropTypes.number.isRequired,
 		updateValue: PropTypes.func.isRequired,
-		media: PropTypes.object.isRequired
+		required: PropTypes.bool.isRequired
 	} )
 }
 
@@ -288,5 +343,6 @@ export {
 	UrlControl,
 	NumberControl,
 	DateControl,
+	RatingControl,
 	ImageControl
 }

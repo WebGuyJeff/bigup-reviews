@@ -9,6 +9,7 @@ import {
 	UrlControl,
 	NumberControl,
 	DateControl,
+	RatingControl,
 	ImageControl
 } from './Controls'
 import json from '../../data/review-definition'
@@ -52,7 +53,7 @@ const MetaBox = ( { postType, metaFields, setMetaFields } ) => {
 			initialOpen={ true }
 		>
 
-			<NumberControl data={ fields[ '_rating' ] } />
+			<RatingControl data={ fields[ '_rating' ] } />
 			<AnyTextControl data={ fields[ '_name' ] } />
 			<ImageControl data={ fields[ '_avatar' ] } />
 			<DateControl data={ fields[ '_date' ] } />

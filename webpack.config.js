@@ -15,6 +15,7 @@ module.exports = {
 		...getWebpackEntryPoints(),
 
 		// Extend with new entrypoints.
-		'bigup-reviews-editor': path.resolve( process.cwd(), 'src', 'bigup-reviews-editor.js' ),
+		'js/bigup-reviews-editor': path.resolve( process.cwd(), 'src', 'bigup-reviews-editor.js' ),
+		'css/bigup-reviews-editor': path.resolve( process.cwd(), 'src', 'css/bigup-reviews-editor.scss' ),
 	},
 }
