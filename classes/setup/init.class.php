@@ -78,7 +78,7 @@ class Init {
 	 * Enqueue scripts for this plugin.
 	 */
 	public function enqueue_editor_scripts() {
-		wp_register_script( 'bigup_Reviews_js', BIGUPREVIEWS_URL . 'build/metaboxPlugin.js', array(), filemtime( BIGUPREVIEWS_PATH . 'build/metaboxPlugin.js' ), true );
-		wp_enqueue_script( 'bigup_Reviews_js' );
+		wp_register_script( 'bigup_reviews_editor_js', BIGUPREVIEWS_URL . 'build/bigup-reviews-editor.js', array(), filemtime( BIGUPREVIEWS_PATH . 'build/bigup-reviews-editor.js' ), true );
+		wp_enqueue_script( 'bigup_reviews_editor_js' );
 	}
 }

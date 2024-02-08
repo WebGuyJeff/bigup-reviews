@@ -17,7 +17,7 @@ const AnyTextControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				help={ description }
+				title={ description }
 				value={ value }
 				onChange={ updateValue }
 				type={ 'text' }
@@ -42,10 +42,11 @@ const EmailControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				help={ description }
+				title={ description }
 				value={ value }
 				onChange={ updateValue }
 				type={ 'email' }
+				inputmode={ 'email' }
 				placeholder={ placeholder }
 				required={ required }
 				maxLength={ maxlength }
@@ -67,10 +68,11 @@ const UrlControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				help={ description }
+				title={ description }
 				value={ value }
 				onChange={ updateValue }
-				type={ 'text' }
+				type={ 'url' }
+				inputmode={ 'url' }
 				placeholder={ placeholder }
 				required={ required }
 				maxLength={ maxlength }
@@ -94,10 +96,11 @@ const NumberControl = ( { data: {
 		<PanelRow>
 			<TextControl
 				label={ label }
-				help={ description }
+				title={ description }
 				value={ value }
 				onChange={ updateValue }
 				type={ 'number' }
+				inputmode={ 'numeric' }
 				placeholder={ placeholder }
 				required={ required }
 				max={ max }
@@ -116,12 +119,24 @@ const DateControl = ( { data: {
 	placeholder,
 	required
 } } ) => {
+
+	let html5Date     = ''
+	const html5DateRe = '^\\d{4}-\\d{2}-\\d{2}$'
+	if ( ! value.toString().match( html5DateRe ) ) {
+		// Convert from unix timestamp to HTML5 date (yyyy-mm-dd).
+		const jsTimeStamp = new Date( value * 1000 )
+		const ISOString   = jsTimeStamp.toISOString()
+		html5Date = ISOString.split( 'T', 1 )[ 0 ]
+	} else {
+		html5Date = value
+	}
+
 	return(
 		<PanelRow>
 			<TextControl
 				label={ label }
-				help={ description }
-				value={ value }
+				title={ description }
+				value={ html5Date }
 				onChange={ updateValue }
 				type={ 'date' }
 				placeholder={ placeholder }

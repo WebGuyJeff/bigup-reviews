@@ -62,7 +62,7 @@
 		{
 			"block_name": false,
 			"suffix": "_email",
-			"label": "Email",
+			"label": "Email Address",
 			"description": "Email address of the reviewer",
 			"type": "string",
 			"input_type": "email",
@@ -124,7 +124,7 @@
 			"placeholder": "Add a rating",
 			"max_value": "5",
 			"min_value": "0",
-			"value_step": ".0.1",
+			"value_step": "0.1",
 			"required": "true",
 			"show_in_rest": "true",
 			"single": "true",

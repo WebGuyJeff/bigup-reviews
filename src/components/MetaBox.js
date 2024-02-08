@@ -52,13 +52,13 @@ const MetaBox = ( { postType, metaFields, setMetaFields } ) => {
 			initialOpen={ true }
 		>
 
-			<AnyTextControl data={ fields[ '_name' ] } />
-			<EmailControl data={ fields[ '_email' ] } />
-			<UrlControl data={ fields[ '_source_url' ] } />
-			<AnyTextControl data={ fields[ '_ip' ] } />
-			<DateControl data={ fields[ '_date' ] } />
 			<NumberControl data={ fields[ '_rating' ] } />
+			<AnyTextControl data={ fields[ '_name' ] } />
 			<ImageControl data={ fields[ '_avatar' ] } />
+			<DateControl data={ fields[ '_date' ] } />
+			<UrlControl data={ fields[ '_source_url' ] } />
+			<EmailControl data={ fields[ '_email' ] } />
+			<AnyTextControl data={ fields[ '_ip' ] } />
 
 		</PluginDocumentSettingPanel>
 	)

@@ -170,7 +170,7 @@ class Sanitize {
 	 */
 	public static function number( $number ) {
 
-		$clean_number = (int) $number;
+		$clean_number = (float) $number;
 		return $clean_number;
 	}
 

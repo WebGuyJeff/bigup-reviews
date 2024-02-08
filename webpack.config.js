@@ -15,6 +15,6 @@ module.exports = {
 		...getWebpackEntryPoints(),
 
 		// Extend with new entrypoints.
-		'metaboxPlugin': path.resolve( process.cwd(), 'src', 'metaboxPlugin.js' ),
+		'bigup-reviews-editor': path.resolve( process.cwd(), 'src', 'bigup-reviews-editor.js' ),
 	},
 }
