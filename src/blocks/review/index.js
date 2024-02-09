@@ -1,5 +1,6 @@
 import { __ } from '@wordpress/i18n'
 import { registerBlockCollection, registerBlockType } from '@wordpress/blocks'
+import { InnerBlocks } from '@wordpress/block-editor'
 import {
 	Logo,
 	Icon
@@ -42,5 +43,7 @@ registerBlockType( metadata.name, {
 	 * block in the editor is defined by the Edit function above. The output of the block on the
 	 * frontend is defined by the render_callback function. See PHP function register_block_type().
 	 */
-	save: () => null,
+	save: props => {
+		return <InnerBlocks.Content />
+	}
 } )

@@ -11,5 +11,13 @@
 	"textdomain": "bigup-reviews",
 	"editorScript": "file:./index.js",
 	"supports": { "html": false },
-	"ancestor": [ "bigup-reviews/review" ]
+	"ancestor": [ "bigup-reviews/review" ],
+	"attributes": {
+		"linkText": {
+			"type": "string",
+			"default": "See original review",
+			"source": "text",
+			"selector": "a"
+		}
+	}
 }

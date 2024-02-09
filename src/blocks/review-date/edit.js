@@ -73,7 +73,7 @@ export default function Edit( {
 							<a
 								href={ postEditUri }
 							>
-								{ __( 'Edit this review to set the name' ) }
+								{ __( 'Edit this review to set the date' ) }
 							</a>
 						</PanelRow>
 					</PanelBody>

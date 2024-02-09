@@ -143,13 +143,65 @@ class Blocks {
 
 			case 'bigup-reviews/review-rating':
 				if ( ! empty( $value ) ) {
-					$output .= '<p ' . $block_attrs . '><em> ~ ' . esc_html( $value ) . '</em></p>';
+					$output .= '<p ' . $block_attrs . '>' . esc_html( $value ) . '</p>';
+
+
+/*
+				<div
+					className={ 'ratingControl' }
+				>
+					<input
+						className={ 'ratingOutput' }
+						id={ 'ratingControl_input' }
+						style={{ '--value': '2.5' }}
+						type={ 'range' }
+						value={ value }
+						max={ max }
+						min={ min }
+						step={ step }
+						required={ required }
+					/>
+				</div>
+*/
+
+
+
 				}
 				break;
 			
 			case 'bigup-reviews/review-avatar':
 				if ( ! empty( $value ) ) {
-					$output .= '<p ' . $block_attrs . '><em> ~ ' . esc_html( $value ) . '</em></p>';
+					$attachment_id  = $value;
+					$url            = wp_get_attachment_url( $attachment_id );
+					$ext            = pathinfo( $url, PATHINFO_EXTENSION );
+					$style          = 'style="display:inline-block;"';
+					$attrs          = get_block_wrapper_attributes();
+					$markup         = '';
+
+					// SVG.
+					if ( 'svg' === $ext ) {
+						$markup = "<svg" .
+							" data-src={$url}" .
+							" width={$attributes['width']}" .
+							" height={$attributes['height']}" .
+							" data-loading='lazy' data-cache='disabled'" .
+							"></svg>";
+
+					// Non-SVG image.
+					} else {
+						$markup = wp_get_attachment_image( 
+							$attachment_id,                          // Attachment id.
+							$size = 'bigup_service_icon',            // Size.
+							$icon = true,                            // Treat image as an icon.
+							$attr = array(
+								'alt' => $field['label'] .  ' icon', // alt text.
+							),
+						);
+					}
+
+					if ( strlen( $markup ) > 0 ) {
+						$output .= '<div ' . $style . ' ' . $attrs . '>' . $markup . '</div>';
+					}
 				}
 				break;
 		}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { TextControl, PanelBody, PanelRow } from '@wordpress/components'
 import { useSelect } from '@wordpress/data'
 import { useEntityProp } from '@wordpress/core-data'
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor'
+import { useBlockProps, InspectorControls, RichText } from '@wordpress/block-editor'
 import metadata from './block.json'
 import json from '../../../data/review-definition'
 const { prefix, key, customFields } = json
@@ -95,15 +95,13 @@ export default function Edit( {
 				</InspectorControls>
 			}
 
-			<div { ...blockProps }>
-				<a
-					style={{ borderStyle:'none', borderWidth:'0px' }}
-					href={ field.value }
-					onClick={ ( e ) => e.preventDefault() }
-				>
-					{ ( field.value ) ? linkText : field.placeholder }
-				</a>
-			</div>
+			<RichText
+				{ ...blockProps }
+				tagName="a"
+				value={ linkText }
+				onChange={ ( content ) => setAttributes( { linkText: content } ) }
+				placeholder={ __( 'Add link text', 'bigup-reviews' ) }
+			/>
 		</>
 	)
 }
