@@ -143,29 +143,19 @@ class Blocks {
 
 			case 'bigup-reviews/review-rating':
 				if ( ! empty( $value ) ) {
-					$output .= '<p ' . $block_attrs . '>' . esc_html( $value ) . '</p>';
 
+error_log( serialize( $block_attrs ) );
 
-/*
-				<div
-					className={ 'ratingControl' }
-				>
-					<input
-						className={ 'ratingOutput' }
-						id={ 'ratingControl_input' }
-						style={{ '--value': '2.5' }}
-						type={ 'range' }
-						value={ value }
-						max={ max }
-						min={ min }
-						step={ step }
-						required={ required }
-					/>
-				</div>
-*/
-
-
-
+					$output .= <<<RATING
+						<div class="ratingControl">
+							<input
+								class="ratingControl_input"
+								style="--value: {$value}"
+								type={ 'range' }
+								readOnly
+							/>
+						</div>
+					RATING;
 				}
 				break;
 			

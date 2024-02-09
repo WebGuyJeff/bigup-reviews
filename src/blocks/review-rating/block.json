@@ -3,7 +3,7 @@
 	"apiVersion": 2,
 	"name": "bigup-reviews/review-rating",
 	"version": "0.1.0",
-	"title": "Review Rating",
+	"title": "Rating",
 	"category": "theme",
 	"icon": "smiley",
 	"description": "The review rating out of 5",

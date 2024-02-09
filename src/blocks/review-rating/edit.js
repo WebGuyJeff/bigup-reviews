@@ -33,7 +33,9 @@ export default function Edit( {
 		queryId }
 	} ) {
 
-	const blockProps = useBlockProps()
+	const blockProps = useBlockProps( {
+		className: 'ratingControl'
+	} )
 
 	// Fallback to check if we're in the post editor for this CPT.
 	const isPostEditorContext = ( key === useSelect( select => select( 'core/editor' ).getCurrentPostType() ) )
@@ -80,13 +82,22 @@ export default function Edit( {
 				</InspectorControls>
 			}
 
-			<div { ...blockProps }>
+			{ field.value &&
+				<div { ...blockProps }>
+					<input
+						className={ 'ratingControl_input' }
+						style={{ '--value': field.value }}
+						type={ 'range' }
+						readOnly
+					/>
+				</div>
+			}
+			{ ! field.value &&
 				<p>
-					<em>
-						{ ( field.value ) ? '~ ' + field.value : field.placeholder }
-					</em>
+					{ field.placeholder }
 				</p>
-			</div>
+			}
+
 		</>
 	)
 }

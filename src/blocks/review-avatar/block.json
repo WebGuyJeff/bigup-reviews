@@ -3,7 +3,7 @@
 	"apiVersion": 2,
 	"name": "bigup-reviews/review-avatar",
 	"version": "0.1.0",
-	"title": "Review Avatar",
+	"title": "Avatar",
 	"category": "theme",
 	"icon": "smiley",
 	"description": "Avatar (image) of the reviewer",

@@ -3,7 +3,7 @@
 	"apiVersion": 2,
 	"name": "bigup-reviews/review-source-url",
 	"version": "0.1.0",
-	"title": "Review Source URL",
+	"title": "Source Link",
 	"category": "theme",
 	"icon": "smiley",
 	"description": "Source URL custom field for the 'Review' custom post type",
