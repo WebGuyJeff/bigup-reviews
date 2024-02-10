@@ -9,7 +9,9 @@
 	"description": "The review rating out of 5",
 	"usesContext": [ "postId", "postType", "queryId" ],
 	"textdomain": "bigup-reviews",
-	"editorScript": "file:./index.js",
+	"editorScript": "file:./review-rating.js",
+	"style": "file:./review-rating.css",
+	"editorStyle": "file:./review-rating-editor.css",
 	"supports": { "html": false },
 	"ancestor": [ "bigup-reviews/review" ]
 }

@@ -7,6 +7,7 @@ import { useBlockProps, InspectorControls } from '@wordpress/block-editor'
 import metadata from './block.json'
 import json from '../../../data/review-definition'
 const { prefix, label, key, customFields } = json
+import './review-rating-editor.scss'
 
 /**
  * Editor Handler.

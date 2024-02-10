@@ -1,0 +1,48 @@
+.ratingControl {
+	&_input {
+
+		--dir: right;
+		--fill: gold;
+		--fillbg: rgba(100, 100, 100, 0.15);
+		--star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"/></svg>');
+		--stars: 5;
+		--starsize: 2.5rem;
+		--symbol: var(--star);
+		--value: 1;
+		--w: calc( var(--stars) * var(--starsize) );
+		--xPercent: calc( 100% * ( var(--value) / var(--stars) ) );
+
+		block-size: var(--starsize);
+		inline-size: var(--w);
+		touch-action: manipulation;
+		appearance: none;
+		display: block;
+		position: relative;
+		width: var(--w) !important;
+		cursor: default !important;
+		pointer-events: none !important;
+	}
+
+	// You can't combine vendor-specific selectors so I'm using mixins to unify rulesets.
+	
+	@mixin rangeTrack {
+		block-size: var(--starsize);
+		mask: repeat left center / var(--starsize) var(--symbol);
+		background: linear-gradient( to var(--dir), var(--fill) 0 var(--xPercent), var(--fillbg) 0 var(--xPercent) );
+		pointer-events: auto;
+	}
+	&_input::-moz-range-track { @include rangeTrack; }
+	&_input::-webkit-slider-runnable-track { @include rangeTrack; }
+
+	@mixin rangeThumb {
+		opacity: 0;
+		width: var(--starsize);
+		height: var(--starsize);
+	}
+	&_input::-moz-range-thumb { @include rangeThumb; }
+	&_input::-webkit-slider-thumb { @include rangeThumb; }
+}
+
+[dir="rtl"] .ratingControl_input {
+	--dir: left;
+}

@@ -1,0 +1,23 @@
+.ratingControl {
+	&_input {
+
+		cursor: pointer;
+		pointer-events: auto;
+
+		&[ readonly="" ] {
+			cursor: default !important;
+			pointer-events: none !important;
+		}
+	}
+
+	&_label {
+		display: block;
+		display: inline-block;
+		margin-bottom: calc(8px);
+		padding: 0px;
+		text-transform: uppercase;
+		line-height: 1.4;
+		font-size: 13px;
+		font-weight: 500;
+	}
+}
