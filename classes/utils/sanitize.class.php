@@ -56,7 +56,10 @@ class Sanitize {
 				return array( new Sanitize(), 'general_api_key' );
 
 			case 'image-upload':
-				return array( new Sanitize(), 'image_id' );
+				return array( new Sanitize(), 'number' );
+
+			case 'rating':
+				return array( new Sanitize(), 'rating' );
 
 			default:
 				error_log( "Bigup Plugin: Invalid sanitize type '{$type}' passed with option" );
@@ -172,6 +175,20 @@ class Sanitize {
 
 		$clean_number = (float) $number;
 		return $clean_number;
+	}
+
+	/**
+	 * Sanitize a rating number allowing a maximum of 2 decimals.
+	 */
+	public static function rating( $rating ) {
+
+		$rounded = round( (float) $rating, 2, PHP_ROUND_HALF_UP );
+		if ( $rounded > 5 ) {
+			$clean_rating = 5;
+		} elseif ( $rounded < 0 ) {
+			$clean_rating = 0;
+		}
+		return $clean_rating;
 	}
 
 
