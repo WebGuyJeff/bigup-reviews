@@ -43,6 +43,7 @@ export default function Edit( {
 		'bigup-reviews/review-rating',
 		'bigup-reviews/review-source-url',
 		'core/post-title',
+		'core/post-content',
 		'core/columns',
 		'core/group',
 		'core/heading',

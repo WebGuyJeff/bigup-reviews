@@ -9,7 +9,8 @@
 	"description": "Name custom field for the 'Review' custom post type",
 	"usesContext": [ "postId", "postType", "queryId" ],
 	"textdomain": "bigup-reviews",
-	"editorScript": "file:./index.js",
+	"editorScript": "file:./review-name.js",
+	"style": "file:./review-name.css",
 	"supports": { "html": false },
 	"ancestor": [ "bigup-reviews/review" ]
 }

@@ -12,6 +12,8 @@
 		--w: calc( var(--stars) * var(--starsize) );
 		--xPercent: calc( 100% * ( var(--value) / var(--stars) ) );
 
+		padding: 0 !important;
+		margin: 0 !important;
 		block-size: var(--starsize);
 		inline-size: var(--w);
 		touch-action: manipulation;

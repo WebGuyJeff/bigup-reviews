@@ -6,6 +6,7 @@ import {
 } from './svg'
 import Edit from './edit'
 import metadata from './block.json'
+import './review-name.scss'
 
 /*
  * Debug.

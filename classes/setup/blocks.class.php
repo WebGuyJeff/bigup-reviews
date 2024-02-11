@@ -80,7 +80,7 @@ class Blocks {
 	/**
 	 * Dynamic server-side render callback.
 	 *
-	 * Builds markup for the dynamic content when called by the render_callback of register_block_type().
+	 * Builds markup for any dynamic block when called by the render_callback of register_block_type().
 	 *
 	 * @param array $attributes Attributes that relate to the block.
 	 * @param array $content Content to be inserted into the markup.
@@ -103,55 +103,64 @@ class Blocks {
 		}
 
 		// Build and return the front-end block markup.
-		$block_attrs = get_block_wrapper_attributes();
 		$output      = '';
 
 		switch ( $block->name ) {
 
 			// The parent block review wrapper.
 			case 'bigup-reviews/review':
-
-				// Need to add innerBlocks here.
-
-				$output .= '<div ' . $block_attrs . '></div>';
+				$attrs   = get_block_wrapper_attributes();
+				$output .= <<<REVIEW
+				<div {$attrs}>
+					{$content}
+				</div>
+				REVIEW;
 				break;
 
 			case 'bigup-reviews/review-name':
 				if ( ! empty( $value ) ) {
-					$output .= '<p ' . $block_attrs . '><em> ~ ' . esc_html( $value ) . '</em></p>';
+					$attrs = get_block_wrapper_attributes();
+					$output .= '<p ' . $attrs . '><em> ~ ' . esc_html( $value ) . '</em></p>';
 				}
 				break;
 
 			case 'bigup-reviews/review-date':
 				if ( ! empty( $value ) ) {
-					$output .= '<p ' . $block_attrs . '><em> ~ ' . esc_html( $value ) . '</em></p>';
+					$attrs   = get_block_wrapper_attributes();
+					$output .= '<p ' . $attrs . '><em>' . esc_html( $value ) . '</em></p>';
 				}
 				break;
 
 			case 'bigup-reviews/review-source-url':
 				if ( ! empty( $value ) ) {
-					$output .= '<a ' . $block_attrs . ' ' .
-					'style="borderStyle:none; borderWidth:0px;" ' .
-					'href="' . esc_url( $value ) . '"' .
-					'rel="noreferrer"' .
-					'target="_blank"' .
-					'>' .
-					$attributes['linkText'] .
-					'</a>';
+					$attrs = get_block_wrapper_attributes(
+						[
+							'style' => 'borderStyle:none; borderWidth:0px;'
+						]
+					);
+					$url     = esc_url( $value );
+					$output .= <<<SOURCEURL
+					<a {$attrs} href="{$url} rel="noreferrer" target="_blank">
+						{$attributes['linkText']}
+					</a>
+					SOURCEURL;
 				}
 				break;
 
 			case 'bigup-reviews/review-rating':
 				if ( ! empty( $value ) ) {
-
-error_log( serialize( $block_attrs ) );
-
+					$attrs = get_block_wrapper_attributes(
+						[
+							'class' => 'ratingControl'
+						]
+					);
+					$rating  = esc_attr( $value );
 					$output .= <<<RATING
-						<div class="ratingControl">
+						<div {$attrs}>
 							<input
 								class="ratingControl_input"
-								style="--value: {$value}"
-								type={ 'range' }
+								style="--value: {$rating}"
+								type="range"
 								readOnly
 							/>
 						</div>
@@ -161,11 +170,11 @@ error_log( serialize( $block_attrs ) );
 			
 			case 'bigup-reviews/review-avatar':
 				if ( ! empty( $value ) ) {
+					$attrs          = get_block_wrapper_attributes();
 					$attachment_id  = $value;
 					$url            = wp_get_attachment_url( $attachment_id );
 					$ext            = pathinfo( $url, PATHINFO_EXTENSION );
 					$style          = 'style="display:inline-block;"';
-					$attrs          = get_block_wrapper_attributes();
 					$markup         = '';
 
 					// SVG.

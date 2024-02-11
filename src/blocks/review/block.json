@@ -28,10 +28,18 @@
 		},
 		"spacing": {
 			"margin": [ "top", "bottom" ],
-			"padding": true
+			"padding": true,
+			"blockGap": true
 		},
-		"position": {
-			"sticky": true
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"layout": {
+			"allowEditing": true,
+			"allowJustification": true,
+			"allowVerticalAlignment": true,
+			"allowOrientation": true
 		}
 	}
 }

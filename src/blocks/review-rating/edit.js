@@ -83,7 +83,7 @@ export default function Edit( {
 				</InspectorControls>
 			}
 
-			{ field.value &&
+			{ ( !! field.value === true ) &&
 				<div { ...blockProps }>
 					<input
 						className={ 'ratingControl_input' }
@@ -93,7 +93,7 @@ export default function Edit( {
 					/>
 				</div>
 			}
-			{ ! field.value &&
+			{ ( !! field.value === false ) &&
 				<p>
 					{ field.placeholder }
 				</p>

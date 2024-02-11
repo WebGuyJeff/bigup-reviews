@@ -43,7 +43,5 @@ registerBlockType( metadata.name, {
 	 * block in the editor is defined by the Edit function above. The output of the block on the
 	 * frontend is defined by the render_callback function. See PHP function register_block_type().
 	 */
-	save: props => {
-		return <InnerBlocks.Content />
-	}
+	save: props => <InnerBlocks.Content />
 } )

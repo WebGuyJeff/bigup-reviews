@@ -42,6 +42,9 @@ class Init {
 		add_action( 'init', array( &$Custom_Post_Type, 'register' ), 0, 1 );
 		add_filter( 'allowed_block_types_all', array( &$Custom_Post_Type, 'allowed_block_types' ), 25, 2 );
 
+		// Opt-in to allow WP to selectively load and inline front end block styles.
+		//add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
 		$Blocks = new Blocks( $this->def );
 		add_action( 'init', array( &$Blocks, 'register_all' ), 10, 0 );
 
@@ -79,6 +82,5 @@ class Init {
 	 */
 	public function editor_scripts_and_styles() {
 		wp_enqueue_script( 'bigup_reviews_editor_js', BIGUPREVIEWS_URL . 'build/js/bigup-reviews-editor.js', array(), filemtime( BIGUPREVIEWS_PATH . 'build/js/bigup-reviews-editor.js' ), true );
-		wp_enqueue_style( 'bigup_reviews_editor_css', BIGUPREVIEWS_URL . 'build/css/bigup-reviews-editor.css', array(), filemtime( BIGUPREVIEWS_PATH . 'build/css/bigup-reviews-editor.css' ), 'all' );
 	}
 }

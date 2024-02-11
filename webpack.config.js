@@ -17,7 +17,6 @@ module.exports = {
 
 		// Extend with new entrypoints.
 		'js/bigup-reviews-editor': path.join( __dirname, '/src/bigup-reviews-editor.js' ),
-		// 'css/bigup-reviews-editor': path.join( __dirname, '/src/css/bigup-reviews-editor.scss' ),
 	},
 	plugins: [
 		// Spread the WordPress plugins.
