@@ -152,9 +152,6 @@ class Init {
 	 * Define custom post list columns sorting method.
 	 */
 	public function define_post_list_custom_columns_sorting( $query ) {
-		if ( !is_admin() ) {
-			return;
-		}
 
 		$orderby = $query->get( 'orderby' );
 
@@ -167,7 +164,27 @@ class Init {
 		// https://awhitepixel.com/modify-add-custom-columns-post-list-wordpress-admin/#:~:text=The%20filter%20for%20modifying%2C%20removing,filter%20name%20would%20be%20manage_post_posts_columns%20.
 		// https://wordpress.stackexchange.com/questions/293318/make-custom-column-sortable
 
+		// https://developer.wordpress.org/reference/classes/wp_meta_query/
 		if ( $orderby == 'rating' ) {
+
+			$meta_query = array( 
+				'relation' => 'OR',
+				array(
+				  'key' => '_bigup_review_rating',
+				  'type' => 'NUMERIC',
+				),
+				array( 
+				  'key' => '_bigup_review_rating',
+				  'compare' => 'NOT EXISTS',
+				),
+				array(
+				  'key' => '_bigup_review_rating',
+				)
+			
+			);
+
+			$query->set( 'meta_query', $meta_query );
+
 			$query->set( 'meta_key', '_bigup_review_rating' );
 			$query->set( 'orderby', 'meta_value_num' );
 		}
