@@ -149,43 +149,48 @@ class Init {
 
 
 	/**
-	 * Define custom post list columns sorting method.
+	 * Define custom columns SQL query post filter and sorting method.
+	 * 
+	 * We want to sort posts but not exclude any even if they have an empty value on the meta column
+	 * being sorted. So we add conditions in the queries to match posts where the key 'EXISTS' or
+	 * 'NOT EXISTS', then sort by either alphabetical ('meta_value') or numerical ('meta_value_num')
+	 * order. This results in empty values being at the end of the sorted list, but not hidden.
 	 */
 	public function define_post_list_custom_columns_sorting( $query ) {
-
 		$orderby = $query->get( 'orderby' );
 
+		// Column: 'name'.
 		if ( $orderby == 'name' ) {
-			$query->set( 'meta_key', '_bigup_review_name' );
+			$query->set( 'meta_query', array(
+				// OR to match any, AND to match all.
+				'relation' => 'OR',
+				// Include posts that have the meta.
+				array(
+					'key' => '_bigup_review_name',
+					'compare' => 'EXISTS',
+				),
+				// Include posts that don't have the meta.
+				array(
+					'key' => '_bigup_review_name',
+					'compare' => 'NOT EXISTS',
+				),
+			) );
 			$query->set( 'orderby', 'meta_value' );
 		}
 
-		// TO FIX: Sorting by rating causes empty rating posts to be hidden upon sort.
-		// https://awhitepixel.com/modify-add-custom-columns-post-list-wordpress-admin/#:~:text=The%20filter%20for%20modifying%2C%20removing,filter%20name%20would%20be%20manage_post_posts_columns%20.
-		// https://wordpress.stackexchange.com/questions/293318/make-custom-column-sortable
-
-		// https://developer.wordpress.org/reference/classes/wp_meta_query/
+		// Column: 'rating'.
 		if ( $orderby == 'rating' ) {
-
-			$meta_query = array( 
+			$query->set( 'meta_query', array(
 				'relation' => 'OR',
 				array(
-				  'key' => '_bigup_review_rating',
-				  'type' => 'NUMERIC',
-				),
-				array( 
-				  'key' => '_bigup_review_rating',
-				  'compare' => 'NOT EXISTS',
+					'key' => '_bigup_review_rating',
+					'compare' => 'EXISTS',
 				),
 				array(
-				  'key' => '_bigup_review_rating',
-				)
-			
-			);
-
-			$query->set( 'meta_query', $meta_query );
-
-			$query->set( 'meta_key', '_bigup_review_rating' );
+					'key' => '_bigup_review_rating',
+					'compare' => 'NOT EXISTS',
+				),
+			) );
 			$query->set( 'orderby', 'meta_value_num' );
 		}
 	}
