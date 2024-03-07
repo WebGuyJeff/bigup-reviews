@@ -7,7 +7,6 @@ import {
 	AnyTextControl,
 	EmailControl,
 	UrlControl,
-	NumberControl,
 	DateControl,
 	RatingControl,
 	ImageControl

@@ -50,6 +50,7 @@ class Init {
 		add_action( 'init', array( &$Blocks, 'register_all' ), 10, 0 );
 
 		if ( ! array_key_exists( 'customFields', $this->def ) ) {
+			error_log( 'BigupWeb\Reviews error: Could not retrieve post type definition' );
 			return;
 		}
 
@@ -69,8 +70,10 @@ class Init {
 		add_filter( 'manage_edit-review_sortable_columns', array( $this, 'make_post_list_custom_columns_sortable' ), 10, 1 );
 		add_action( 'pre_get_posts', array( $this, 'define_post_list_custom_columns_sorting' ), 10, 1 );
 
-		// Register patterns, scripts and styles.
+		// Register patterns.
 		add_action( 'init', array( new Patterns(), 'register_all' ) );
+
+		// Register scripts and styles.
 		add_action( 'enqueue_block_editor_assets', array( &$this, 'editor_scripts_and_styles' ) );
 
 		// Enable WP custom fields even if ACF is installed.
