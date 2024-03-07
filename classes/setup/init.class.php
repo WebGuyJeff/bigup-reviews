@@ -35,6 +35,7 @@ class Init {
 	public function setup() {
 
 		if ( ! is_array( $this->def ) || ! array_key_exists( 'key', $this->def ) ) {
+			error_log( 'BigupWeb\Reviews error: Could not retrieve post type definition' );
 			return;
 		}
 
@@ -50,7 +51,6 @@ class Init {
 		add_action( 'init', array( &$Blocks, 'register_all' ), 10, 0 );
 
 		if ( ! array_key_exists( 'customFields', $this->def ) ) {
-			error_log( 'BigupWeb\Reviews error: Could not retrieve post type definition' );
 			return;
 		}
 
