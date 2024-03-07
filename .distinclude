@@ -3,6 +3,6 @@
 ./classes
 ./data
 ./patterns
-./bigup-reviews.php
+./plugin-entry.php
 ./license.md
 ./readme.md
