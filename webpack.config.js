@@ -2,8 +2,6 @@ const path = require( 'path' )
 const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' )
 // Import the @wordpress/scripts config.
 const wordpressConfig = require( '@wordpress/scripts/config/webpack.config' )
-// Import the utility to generate entry points from any '**/block.json' in 'src'.
-const { getWebpackEntryPoints } = require( '@wordpress/scripts/utils/config' )
 
 // See svgo.config.js to configure SVG manipulation.
 
@@ -12,9 +10,8 @@ module.exports = {
 	...wordpressConfig,
 
 	entry: {
-		// Spread the auto-generated entrypoints.
-		...getWebpackEntryPoints(),
-
+		// @wordpress/scripts helper which generates entry points from any '**/block.json' in 'src'.
+		...wordpressConfig.entry(),
 		// Extend with new entrypoints.
 		'js/bigup-reviews-editor': path.join( __dirname, '/src/bigup-reviews-editor.js' ),
 	},
