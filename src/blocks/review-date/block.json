@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "bigup-reviews/review-date",
 	"version": "0.1.0",
 	"title": "Date",
