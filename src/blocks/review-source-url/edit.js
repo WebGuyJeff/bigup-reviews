@@ -6,7 +6,7 @@ import { useEntityProp } from '@wordpress/core-data'
 import { useBlockProps, InspectorControls, RichText } from '@wordpress/block-editor'
 import metadata from './block.json'
 import json from '../../../data/review-definition'
-const { prefix, key, customFields } = json
+const { prefix, label, key, customFields } = json
 
 /**
  * Editor Handler.

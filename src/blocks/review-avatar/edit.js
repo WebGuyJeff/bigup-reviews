@@ -7,7 +7,7 @@ import { useBlockProps, InspectorControls } from '@wordpress/block-editor'
 import metadata from './block.json'
 import json from '../../../data/review-definition'
 import { Icon } from '../../components/Icon'
-const { prefix, key, customFields } = json
+const { prefix, label, key, customFields } = json
 
 /**
  * Editor Handler.
